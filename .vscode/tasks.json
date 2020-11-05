@@ -1,0 +1,112 @@
+{
+    "tasks": [
+        {
+            "label": "Compilar proyecto «fibonacci»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make",
+            },
+            "args": [
+                "fibonacci"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "Ejecutar proyecto «fibonacci»",
+            "type": "shell",
+            "command": "bin/fibonacci",
+            "windows": {
+                "command": "chcp 65001 ; bin\\fibonacci.exe",
+            },
+            "dependsOn": "Compilar proyecto «fibonacci»",
+            "problemMatcher": ["$gcc"],
+        },
+
+        {
+            "label": "Compilar proyecto «primera-potencia»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make",
+            },
+            "args": [
+                "primera-potencia"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+        },
+        {
+            "label": "Ejecutar proyecto «primera-potencia»",
+            "type": "shell",
+            "command": "bin/primera-potencia",
+            "windows": {
+                "command": "chcp 65001 ; bin\\primera-potencia.exe",
+            },
+            "dependsOn": "Compilar proyecto «primera-potencia»",
+            "problemMatcher": ["$gcc"],
+        },
+
+        {
+            "label": "Compilar proyecto «lychrel»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make",
+            },
+            "args": [
+                "lychrel"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "Ejecutar proyecto «lychrel»",
+            "type": "shell",
+            "command": "bin/lychrel",
+            "windows": {
+                "command": "chcp 65001 ; bin\\lychrel.exe",
+            },
+            "dependsOn": "Compilar proyecto «lychrel»",
+            "problemMatcher": ["$gcc"],
+        },
+
+        {
+            "label": "Compilar tests del módulo «naturales-grandes»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make",
+            },
+            "args": [
+                "naturales-grandes-test"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "test",
+        },
+        {
+            "label": "Ejecutar tests del módulo «naturales-grandes»",
+            "type": "shell",
+            "command": "bin/naturales-grandes-test",
+            "windows": {
+                "command": "chcp 65001 ; bin\\naturales-grandes-test",
+            },
+            "dependsOn": "Compilar tests del módulo «naturales-grandes»",
+            "problemMatcher": ["$gcc"],
+        },
+    ],
+    "presentation": {
+        "showReuseMessage": false,
+        "panel": "shared",
+        "reveal": "always",
+        "focus": true,
+    },
+    "version": "2.0.0"
+}

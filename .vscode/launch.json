@@ -1,0 +1,86 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Depurar proyecto «fibonacci»",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/fibonacci",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compilar proyecto «fibonacci»"
+        },
+        {
+            "name": "Depurar proyecto «primera-potencia»",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/primera-potencia",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compilar proyecto «primera-potencia»"
+        },
+        {
+            "name": "Depurar proyecto «lychrel»",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/lychrel",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compilar proyecto «lychrel»"
+        },
+        {
+            "name": "Depurar tests del módulo «naturales-grandes»",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/naturales-grandes-test",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Habilitar la impresión con sangría para gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+            ],
+            "preLaunchTask": "Compilar tests del módulo «naturales-grandes»"
+        },
+    ]
+}

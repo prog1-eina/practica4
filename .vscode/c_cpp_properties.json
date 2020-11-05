@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Programación 1",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/../practica3/testing-prog1/**"
+            ]
+        }
+    ],
+    "version": 4
+}
