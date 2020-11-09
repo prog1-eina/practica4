@@ -19,7 +19,7 @@ using namespace std;
  *       correcto «valorEsperado». En caso negativo, ha informado
  *       también acerca del valor incorrecto que calculó la función.
  */
-void probarConvertir(const int n, const string valorEsperado);
+void probarConvertir(const unsigned int n, const string valorEsperado);
 
 /*
  * Pre:  «a», «b» y «valorEsperado» son cadenas de caracteres que contienen la 
@@ -42,7 +42,7 @@ void probarSumar(const string a, const string b, const string valorEsperado);
  *       correcto «valorEsperado». En caso negativo, ha informado también acerca
  *       del valor incorrecto que devolvió la función.
  */
-void probarValor(const string numero, const int valorEsperado);
+void probarValor(const string numero, const unsigned int valorEsperado);
 
 
 /*

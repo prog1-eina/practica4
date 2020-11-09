@@ -94,7 +94,7 @@ void inicializar(unsigned int numeroGrande[]) {
  *       correcto «valorEsperado». En caso negativo, ha informado
  *       también acerca del valor incorrecto que calculó la función.
  */
-void probarConvertir(const int n, const string valorEsperado) {
+void probarConvertir(const unsigned int n, const string valorEsperado) {
     cout << "Prueba convertir (" << n << ", unsigned int[]) ";
     unsigned int valorCalculado[NUM_DIGITOS];
     inicializar(valorCalculado);
@@ -132,7 +132,7 @@ void probarSumar(const string aStr, const string bStr,
  *       correcto «valorEsperado». En caso negativo, ha informado también acerca
  *       del valor incorrecto que devolvió la función.
  */
-void probarValor(const string numero, const int valorEsperado) {
+void probarValor(const string numero, const unsigned int valorEsperado) {
    cout << "Prueba valor(" << numero << ") ";
    unsigned int numeroGrande[NUM_DIGITOS];
    convertirDeString(numero, numeroGrande);
