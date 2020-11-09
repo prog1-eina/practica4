@@ -41,27 +41,26 @@ bool sonIguales(const unsigned int a[], const unsigned int b[]);
 
 /*
  * Pre:  «natural» almacena la representación de un número natural. La 
- *       componente numero[0] representa las unidades de «natural», la
- *       componente numero[1] las decenas de «natural» y así, sucesivamente. 
+ *       componente natural[0] representa las unidades de «natural», la
+ *       componente natural[1] las decenas de «natural» y así, sucesivamente. 
  *       Las componentes de índices superiores al correspondiente al dígito más
  *       significativo almacenan el valor 0. «natural» tiene «NUM_DIGITOS»
  *       componentes.
  * Post: Al acabar la ejecución de esta función, esta ha devuelto el número de
  *       cifras de «natural» cuando se escribe en base 10 sin ceros a la
- *       izquierda (devuelve el valor «n» al que se hace referencia en la
- *       precondición, que es necesario calcular).
+ *       izquierda.
  */
 unsigned int numCifras(const unsigned int natural[]);
 
 /*
  * Pre:  «natural» almacena la representación de un número natural grande. Sea 
- *       «n» el número de dígitos de «natural». La componente numero[0] 
- *       representa las unidades de «natural», la componente numero[1] las
+ *       «n» el número de dígitos de «natural». La componente natural[0] 
+ *       representa las unidades de «natural», la componente natural[1] las
  *       decenas de «natural» y así, sucesivamente. Las componentes de índices
  *       superiores al correspondiente al dígito más significativo
  *       almacenan el valor 0. «natural» tiene «NUM_DIGITOS» componentes.
  * Post: Tras ejecutar esta función, se ha escrito en la pantalla el número 
- *       natural representado por «numero» (sin ceros a la izquierda).
+ *       natural representado por «natural» (sin ceros a la izquierda).
  */
 void escribirEnPantalla(const unsigned int natural[]);
 
@@ -69,8 +68,8 @@ void escribirEnPantalla(const unsigned int natural[]);
  * Pre:  «naturalGrande» tiene «NUM_DIGITOS» componentes.
  * Post: Tras ejecutar esta función, «naturalGrande» contiene la secuencia de 
  *       dígitos equivalente a «numero». 
- *       La componente numeroGrande[0] almacena las unidades de «numero», la
- *       componente numeroGrande[1], las decenas de «numero» y así 
+ *       La componente naturalGrande[0] almacena las unidades de «numero», la
+ *       componente naturalGrande[1], las decenas de «numero» y así 
  *       sucesivamente. Las componentes de índices
  *       superiores al correspondiente al dígito más significativo
  *       almacenan el valor 0.
@@ -80,9 +79,9 @@ void convertir(const unsigned int numero, unsigned int naturalGrande[]);
 /*
  * Pre:  «naturalGrande» almacena los dígitos de un número natural lo 
  *       suficientemente pequeño como para ser representado por un dato de tipo
- *       «unsigned int». En la componente numeroGrande[0] se almacena el dígito
+ *       «unsigned int». En la componente naturalGrande[0] se almacena el dígito
  *       que representa las unidades de ese número, en la componente 
- *       numeroGrande[1], las decenas y así sucesivamente. Las componentes de
+ *       naturalGrande[1], las decenas y así sucesivamente. Las componentes de
  *       índices superiores al correspondiente al dígito más significativo
  *       almacenan el valor 0. «naturalGrande» tiene 
  *       «NUM_DIGITOS» componentes.
@@ -111,7 +110,7 @@ void sumar(const unsigned int a[], const unsigned int b[], unsigned int suma[]);
 
 /*
  * Pre:  «natural» almacena la representación de un número natural. La componente
- *       numero[0] representa las unidades de «natural», la componente numero[1]
+ *       natural[0] representa las unidades de «natural», la componente natural[1]
  *       las decenas de «natural» y así sucesivamente. Las componentes de 
  *       índices superiores al correspondiente al dígito más significativo
  *       almacenan el valor 0. «natural» e «imagen» tienen «NUM_DIGITOS» 
@@ -123,10 +122,10 @@ void calcularImagen(const unsigned int natural[], unsigned int imagen[]);
 
 /*
  * Pre:  «natural» almacena la representación de un número natural. La componente
- *       numero[0] representa las unidades de «natural», la componente numero[1]
+ *       natural[0] representa las unidades de «natural», la componente natural[1]
  *       las decenas de «natural» y así sucesivamente. Las componentes de índices
  *       superiores al correspondiente al dígito más significativo
- *       almacenan el valor 0. «numeroGrande» tiene «NUM_DIGITOS» componentes.
+ *       almacenan el valor 0. «natural» tiene «NUM_DIGITOS» componentes.
  * Post: Ha devuelto «true» si y solo si «natural» es un número capicúa.
  */
 bool esCapicua(const unsigned int natural[]);
