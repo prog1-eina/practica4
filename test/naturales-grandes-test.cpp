@@ -136,7 +136,7 @@ void probarValor(const string numero, const unsigned int valorEsperado) {
    cout << "Prueba valor(" << numero << ") ";
    unsigned int numeroGrande[NUM_DIGITOS];
    convertirDeString(numero, numeroGrande);
-   int valorDevuelto = valor(numeroGrande);
+   unsigned int valorDevuelto = valor(numeroGrande);
    escribirResultadoPrueba(valorEsperado, valorDevuelto);
 }
 
