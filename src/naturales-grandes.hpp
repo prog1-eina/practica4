@@ -4,7 +4,7 @@
  * Ultima revisión: 31 de octubre de 2020
  * Resumen: Fichero de interfaz «naturales-grandes.hpp» de un módulo denominado
  *          «naturales-grandes» para trabajar con números naturales de gran
- *          magnitud en la 4.ª práctica.
+ *          magnitud en la 4ª práctica.
 \******************************************************************************/
 
 #pragma once
@@ -13,11 +13,10 @@ const unsigned int NUM_DIGITOS = 1000;
 
 /*
  * Pre:  «original» almacena la representación de un número natural. La
- *       componente original[0] representa   
- *       las unidades de «original», la componente original[1] las decenas de  
- *       «original» y así, sucesivamente. Las componentes de índices
- *       superiores al correspondiente al dígito más significativo
- *       almacenan el valor 0. «original» y «copia» tienen 
+ *       componente original[0] representa las unidades de «original», la
+ *       componente original[1] las decenas de «original» y así, sucesivamente.
+ *       Las componentes de índices superiores al correspondiente al dígito más
+ *       significativo almacenan el valor 0. «original» y «copia» tienen 
  *       «NUM_DIGITOS» componentes.
  * Post: Tras ejecutar esta función, «copia» almacena una representación
  *       idéntica a la del número natural correspondiente a la de «original».
