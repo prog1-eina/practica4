@@ -98,6 +98,19 @@
             "dependsOn": "Compilar tests del módulo «naturales-grandes»",
             "problemMatcher": ["$gcc"],
         },
+        {
+            "label": "Limpiar resultados de compilación",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make.exe",
+            },
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+       },
     ],
     "presentation": {
         "showReuseMessage": true,

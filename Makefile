@@ -10,7 +10,7 @@
 ## DIRECTORIOS
 SOURCE_DIR = src
 TEST_DIR = test
-TESTING_LIB_DIR = ../practica3/testing-prog1
+TESTING_LIB_DIR = ../practica3/test/testing-prog1
 BUILD_DIR = build
 BIN_DIR = bin
 
@@ -61,3 +61,10 @@ $(BIN_DIR):
 
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
+
+clean:
+ifeq ($(OS),Windows_NT)
+	rmdir /S /Q $(BIN_DIR) $(BUILD_DIR)
+else
+	rm -f $(OBJECTS) $(TESTING_OBJECTS) $(BIN_DIR)/*
+endif
