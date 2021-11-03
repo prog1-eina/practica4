@@ -35,7 +35,7 @@ using namespace std;
  *       caracteres que representa el número natural representado por «numero» 
  *       (sin ceros a la izquierda).
  */
-string convertirAString(const unsigned int numero[]) {
+string convertirAString(const unsigned numero[]) {
     int i = NUM_DIGITOS - 1;
     while (i >= 0 && numero[i] == 0) {
         i--;
@@ -65,11 +65,11 @@ string convertirAString(const unsigned int numero[]) {
  *       el dígito más significativo de «numero». Las componentes de índices 
  *       superiores almacenan el valor 0
  */
-void convertirDeString(const string numeroStr, unsigned int numeroGrande[]) {
-    for(unsigned int i = 0; i < numeroStr.length(); i++) {
+void convertirDeString(const string numeroStr, unsigned numeroGrande[]) {
+    for(unsigned i = 0; i < numeroStr.length(); i++) {
         numeroGrande[numeroStr.length() - i - 1] = numeroStr.at(i) - '0';
     }
-    for (unsigned int i = numeroStr.length(); i < NUM_DIGITOS; i++) {
+    for (unsigned i = numeroStr.length(); i < NUM_DIGITOS; i++) {
         numeroGrande[i] = 0;
     }
 }
@@ -80,8 +80,8 @@ void convertirDeString(const string numeroStr, unsigned int numeroGrande[]) {
  * Post: Ha inicializado las NUM_DIGITOS componentes de «numeroGrande» con el 
  *       valor 4 para maximizar las posibilidades de localizar errores.
  */
-void inicializar(unsigned int numeroGrande[]) {
-    for (unsigned int i = 0; i < NUM_DIGITOS; i++) {
+void inicializar(unsigned numeroGrande[]) {
+    for (unsigned i = 0; i < NUM_DIGITOS; i++) {
         numeroGrande[i] = 4;
     }
 }
@@ -94,9 +94,9 @@ void inicializar(unsigned int numeroGrande[]) {
  *       correcto «valorEsperado». En caso negativo, ha informado
  *       también acerca del valor incorrecto que calculó la función.
  */
-void probarConvertir(const unsigned int n, const string valorEsperado) {
-    cout << "Prueba convertir (" << n << ", unsigned int[]) ";
-    unsigned int valorCalculado[NUM_DIGITOS];
+void probarConvertir(const unsigned n, const string valorEsperado) {
+    cout << "Prueba convertir (" << n << ", unsigned[]) ";
+    unsigned valorCalculado[NUM_DIGITOS];
     inicializar(valorCalculado);
     convertir(n, valorCalculado);
     escribirResultadoPrueba(valorEsperado, convertirAString(valorCalculado));
@@ -113,8 +113,8 @@ void probarConvertir(const unsigned int n, const string valorEsperado) {
  */
 void probarSumar(const string aStr, const string bStr, 
                  const string valorEsperado) {
-    cout << "Prueba sumar (" << aStr << ", " << bStr << ", unsigned int[]) ";
-    unsigned int a[NUM_DIGITOS], b[NUM_DIGITOS], valorCalculado[NUM_DIGITOS];
+    cout << "Prueba sumar (" << aStr << ", " << bStr << ", unsigned[]) ";
+    unsigned a[NUM_DIGITOS], b[NUM_DIGITOS], valorCalculado[NUM_DIGITOS];
     convertirDeString(aStr, a);
     convertirDeString(bStr, b);
     inicializar(valorCalculado);
@@ -132,11 +132,11 @@ void probarSumar(const string aStr, const string bStr,
  *       correcto «valorEsperado». En caso negativo, ha informado también acerca
  *       del valor incorrecto que devolvió la función.
  */
-void probarValor(const string numero, const unsigned int valorEsperado) {
+void probarValor(const string numero, const unsigned valorEsperado) {
    cout << "Prueba valor(" << numero << ") ";
-   unsigned int numeroGrande[NUM_DIGITOS];
+   unsigned numeroGrande[NUM_DIGITOS];
    convertirDeString(numero, numeroGrande);
-   unsigned int valorDevuelto = valor(numeroGrande);
+   unsigned valorDevuelto = valor(numeroGrande);
    escribirResultadoPrueba(valorEsperado, valorDevuelto);
 }
 
@@ -151,8 +151,8 @@ void probarValor(const string numero, const unsigned int valorEsperado) {
  *       acerca del valor incorrecto que devolvió la función.
  */
 void probarCalcularImagen(const string numero, const string valorEsperado) {
-    cout << "Prueba calcularImagen (" << numero << ", unsigned int[]) ";
-    unsigned int numeroGrande[NUM_DIGITOS], valorCalculado[NUM_DIGITOS];
+    cout << "Prueba calcularImagen (" << numero << ", unsigned[]) ";
+    unsigned numeroGrande[NUM_DIGITOS], valorCalculado[NUM_DIGITOS];
     convertirDeString(numero, numeroGrande);
     inicializar(valorCalculado);
     calcularImagen(numeroGrande, valorCalculado);
@@ -171,7 +171,7 @@ void probarCalcularImagen(const string numero, const string valorEsperado) {
  */
 void probarEsCapicua(const string numero, const bool valorEsperado) {
     cout << "Prueba esCapicua (" << numero << ") ";
-    unsigned int numeroGrande[NUM_DIGITOS];
+    unsigned numeroGrande[NUM_DIGITOS];
     convertirDeString(numero, numeroGrande);
     bool valorCalculado = esCapicua(numeroGrande);
     escribirResultadoPrueba(valorEsperado, valorCalculado);
@@ -187,8 +187,8 @@ void probarEsCapicua(const string numero, const bool valorEsperado) {
  *       también acerca del valor incorrecto que devolvió la función.
  */
 void probarCopiar(const string numeroStr) {
-    cout << "Prueba copiar (" << numeroStr << ", unsigned int[]) ";
-    unsigned int numeroGrande[NUM_DIGITOS], valorCalculado[NUM_DIGITOS];
+    cout << "Prueba copiar (" << numeroStr << ", unsigned[]) ";
+    unsigned numeroGrande[NUM_DIGITOS], valorCalculado[NUM_DIGITOS];
     convertirDeString(numeroStr, numeroGrande);
     inicializar(valorCalculado);
     copiar(numeroGrande, valorCalculado);
@@ -206,7 +206,7 @@ void probarCopiar(const string numeroStr) {
 void probarSonIguales(const string aStr, const string bStr, 
                       const bool valorEsperado) {
     cout << "Prueba sonIguales (" << aStr << ", " << bStr << ") ";
-    unsigned int a[NUM_DIGITOS], b[NUM_DIGITOS];
+    unsigned a[NUM_DIGITOS], b[NUM_DIGITOS];
     convertirDeString(aStr, a);
     convertirDeString(bStr, b);
     bool valorCalculado = sonIguales(a, b);
@@ -224,10 +224,10 @@ void probarSonIguales(const string aStr, const string bStr,
  *       valor correcto «valorEsperado». En caso negativo, ha informado también
  *       acerca del valor incorrecto que devolvió la función.
  */
-void probarNumCifras(const string numero, const unsigned int valorEsperado) {
+void probarNumCifras(const string numero, const unsigned valorEsperado) {
     cout << "Prueba numCifras (" << numero << ") ";
-    unsigned int numeroGrande[NUM_DIGITOS];
+    unsigned numeroGrande[NUM_DIGITOS];
     convertirDeString(numero, numeroGrande);
-    unsigned int valorCalculado = numCifras(numeroGrande);
+    unsigned valorCalculado = numCifras(numeroGrande);
     escribirResultadoPrueba(valorEsperado, valorCalculado);
 }

@@ -1,12 +1,13 @@
-﻿/*********************************************************************************
+﻿/******************************************************************************\
  * Programación 1. Práctica 4
  * Autor: Miguel Ángel Latre Abadía
  * Ultima revisión: 10 de noviembre de 2018
- * Resumen: Fichero de interfaz «naturales-grandes-test.h» de un módulo denominado
- * «naturales-grandes-test» para hacer de pruebas de las funciones definidas en el
- * módulo «naturales-grandes» de la 4.ª práctica.
+ * Resumen: Fichero de interfaz «naturales-grandes-test.h» de un módulo
+ *          denominado «naturales-grandes-test» para hacer de pruebas de las
+ *          funciones definidas en el módulo «naturales-grandes» de la
+ *          4ª práctica.
  * Codificación de caracteres original de este fichero: UTF-8 con BOM
-\********************************************************************************/
+\******************************************************************************/
 
 #include <string>
 using namespace std;
@@ -19,7 +20,7 @@ using namespace std;
  *       correcto «valorEsperado». En caso negativo, ha informado
  *       también acerca del valor incorrecto que calculó la función.
  */
-void probarConvertir(const unsigned int n, const string valorEsperado);
+void probarConvertir(const unsigned n, const string valorEsperado);
 
 /*
  * Pre:  «a», «b» y «valorEsperado» son cadenas de caracteres que contienen la 
@@ -42,7 +43,7 @@ void probarSumar(const string a, const string b, const string valorEsperado);
  *       correcto «valorEsperado». En caso negativo, ha informado también acerca
  *       del valor incorrecto que devolvió la función.
  */
-void probarValor(const string numero, const unsigned int valorEsperado);
+void probarValor(const string numero, const unsigned valorEsperado);
 
 
 /*
@@ -98,4 +99,4 @@ void probarSonIguales(const string a, const string b, const bool valorEsperado);
  *       valor correcto «valorEsperado». En caso negativo, ha informado también
  *       acerca del valor incorrecto que devolvió la función.
  */
-void probarNumCifras(const string numero, const unsigned int valorEsperado);
+void probarNumCifras(const string numero, const unsigned valorEsperado);
