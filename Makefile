@@ -64,7 +64,8 @@ $(BUILD_DIR):
 
 clean:
 ifeq ($(OS),Windows_NT)
-	rmdir /S /Q $(BIN_DIR) $(BUILD_DIR)
+	if exist $(BIN_DIR) rmdir /S /Q $(BIN_DIR)
+	if exist $(BUILD_DIR) rmdir /S /Q $(BUILD_DIR)
 else
 	rm -f $(OBJECTS) $(TESTING_OBJECTS) $(BIN_DIR)/*
 endif
