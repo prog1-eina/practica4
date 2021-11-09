@@ -20,7 +20,7 @@
  * Post: Tras ejecutar esta función, «copia» almacena una representación
  *       idéntica a la del número natural correspondiente a la de «original».
  */
-void copiar(const unsigned int original[], unsigned int copia[]) {
+void copiar(const unsigned original[], unsigned copia[]) {
     // Por completar
 }
 
@@ -38,7 +38,7 @@ void copiar(const unsigned int original[], unsigned int copia[]) {
  *       booleano true si «a» y «b» representan el mismo número natural y false
  *       en caso contrario.
  */
-bool sonIguales(const unsigned int a[], const unsigned int b[]) {
+bool sonIguales(const unsigned a[], const unsigned b[]) {
     // Por completar
 }
 
@@ -54,7 +54,7 @@ bool sonIguales(const unsigned int a[], const unsigned int b[]) {
  *       cifras de «natural» cuando se escribe en base 10 sin ceros a la
  *       izquierda.
  */
-unsigned int numCifras(const unsigned int natural[]) {
+unsigned numCifras(const unsigned natural[]) {
     // Por completar
 }
 
@@ -68,7 +68,7 @@ unsigned int numCifras(const unsigned int natural[]) {
  * Post: Tras ejecutar esta función, se ha escrito en la pantalla el número 
  *       natural representado por «natural» (sin ceros a la izquierda).
  */
-void escribirEnPantalla(const unsigned int natural[]) {
+void escribirEnPantalla(const unsigned natural[]) {
     // Por completar
 }
 
@@ -83,7 +83,7 @@ void escribirEnPantalla(const unsigned int natural[]) {
  *       superiores al correspondiente al dígito más significativo
  *       almacenan el valor 0.
  */
-void convertir(const unsigned int numero, unsigned int naturalGrande[]) {
+void convertir(const unsigned numero, unsigned naturalGrande[]) {
     // Por completar
 }
 
@@ -91,7 +91,7 @@ void convertir(const unsigned int numero, unsigned int naturalGrande[]) {
 /*
  * Pre:  «naturalGrande» almacena los dígitos de un número natural lo 
  *       suficientemente pequeño como para ser representado por un dato de tipo
- *       «unsigned int». En la componente naturalGrande[0] se almacena el dígito
+ *       «unsigned». En la componente naturalGrande[0] se almacena el dígito
  *       que representa las unidades de ese número, en la componente 
  *       naturalGrande[1], las decenas y así sucesivamente. Las componentes de
  *       índices superiores al correspondiente al dígito más significativo
@@ -100,7 +100,7 @@ void convertir(const unsigned int numero, unsigned int naturalGrande[]) {
  * Post: Al acabar la ejecución de esta función, esta ha devuelto el valor
  *       numérico del natural almacenado en «naturalGrande».
  */
-unsigned int valor(const unsigned int naturalGrande[]) {
+unsigned valor(const unsigned naturalGrande[]) {
     // Por completar
 }
 
@@ -121,7 +121,7 @@ unsigned int valor(const unsigned int naturalGrande[]) {
  *       representa las unidades de la suma, la componente suma[1] representa
  *       las decenas y así sucesivamente.
  */
-void sumar(const unsigned int a[], const unsigned int b[], unsigned int suma[]) {
+void sumar(const unsigned a[], const unsigned b[], unsigned suma[]) {
     // Por completar
 }
 
@@ -136,7 +136,7 @@ void sumar(const unsigned int a[], const unsigned int b[], unsigned int suma[]) 
  * Post: Tras ejecutar esta función, «imagen» almacena la representación del 
  *       número natural correspondiente a la imagen especular de «natural».
  */
-void calcularImagen(const unsigned int natural[], unsigned int imagen[]) {
+void calcularImagen(const unsigned natural[], unsigned imagen[]) {
     // Por completar
 }
 
@@ -149,7 +149,7 @@ void calcularImagen(const unsigned int natural[], unsigned int imagen[]) {
  *       almacenan el valor 0. «natural» tiene «NUM_DIGITOS» componentes.
  * Post: Ha devuelto «true» si y solo si «natural» es un número capicúa.
  */
-bool esCapicua(const unsigned int natural[]) {
+bool esCapicua(const unsigned natural[]) {
     // Por completar
 }
 
