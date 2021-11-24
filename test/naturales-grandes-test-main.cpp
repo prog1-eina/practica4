@@ -2,7 +2,7 @@
  * Programación 1. Práctica 4
  * Autores: Miguel Ángel Latre
  * Ultima revisión: 31 de octubre de 2020
- * Resumen: Programa de pruebas del módulo «naturales-grandes» de la 4ª 
+ * Resumen: Programa de pruebas del módulo «naturales-grandes» de la 4.ª 
  *          práctica.
  * Nota: Para facilitar la escritura de este programa de pruebas, los números
  *       grandes se han expresado como cadenas de caracteres. Las funciones 
@@ -93,7 +93,6 @@ int main() {
     probarValor("123456789", 123456789);
 
     probarCalcularImagen("0", "0");
-    probarCalcularImagen("000", "0");
     probarCalcularImagen("1", "1");
     probarCalcularImagen("18", "81");
     probarCalcularImagen("903", "309");
