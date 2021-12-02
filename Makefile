@@ -67,5 +67,5 @@ ifeq ($(OS),Windows_NT)
 	if exist $(BIN_DIR) rmdir /S /Q $(BIN_DIR)
 	if exist $(BUILD_DIR) rmdir /S /Q $(BUILD_DIR)
 else
-	rm -f $(OBJECTS) $(TESTING_OBJECTS) $(BIN_DIR)/*
+	rm -f $(FIBONACCI_OBJECTS) $(POTENCIA_OBJECTS) $(LYCHREL_OBJECTS) $(TESTING_OBJECTS) $(BIN_DIR)/*
 endif
