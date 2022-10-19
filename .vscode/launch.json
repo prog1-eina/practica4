@@ -16,7 +16,10 @@
             "externalConsole": true,
             "MIMode": "gdb",
             "osx": {
-                "MIMode": "lldb"
+                "type": "lldb",
+                "MIMode": "lldb",
+                "args": ["-arg1", "-arg2"],
+                "console": "externalTerminal",
             },
             "setupCommands": [
                 {
@@ -39,7 +42,10 @@
             "externalConsole": true,
             "MIMode": "gdb",
             "osx": {
-                "MIMode": "lldb"
+                "type": "lldb",
+                "MIMode": "lldb",
+                "args": ["-arg1", "-arg2"],
+                "console": "externalTerminal",
             },
             "setupCommands": [
                 {
@@ -62,7 +68,10 @@
             "externalConsole": true,
             "MIMode": "gdb",
             "osx": {
-                "MIMode": "lldb"
+                "type": "lldb",
+                "MIMode": "lldb",
+                "args": ["-arg1", "-arg2"],
+                "console": "externalTerminal",
             },
             "setupCommands": [
                 {
@@ -83,7 +92,10 @@
             "externalConsole": true,
             "MIMode": "gdb",
             "osx": {
-                "MIMode": "lldb"
+                "type": "lldb",
+                "MIMode": "lldb",
+                "args": ["-arg1", "-arg2"],
+                "console": "externalTerminal",
             },
             "setupCommands": [
                 {
