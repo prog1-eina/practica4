@@ -1,7 +1,7 @@
 ﻿/******************************************************************************\
  * Programación 1. Práctica 4
  * Autores: Miguel Ángel Latre
- * Ultima revisión: 31 de octubre de 2020
+ * Ultima revisión: 2 de noviembre de 2022
  * Resumen: Programa de pruebas del módulo «naturales-grandes» de la 4.ª 
  *          práctica.
  * Nota: Para facilitar la escritura de este programa de pruebas, los números
@@ -75,6 +75,7 @@ int main() {
     probarSumar("10", "802", "812");
     // Con acarreo
     probarSumar("8", "8", "16");
+    probarSumar("108", "108", "216");
     probarSumar("189", "21", "210");
     probarSumar("21", "189", "210");
     probarSumar("9999", "1", "10000");
