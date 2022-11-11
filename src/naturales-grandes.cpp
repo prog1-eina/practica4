@@ -111,9 +111,8 @@ unsigned valor(const unsigned naturalGrande[]) {
  *       Los vectores «a», «b» y «suma» tienen «NUM_DIGITOS» componentes.
  * Post: Tras ejecutar este procedimiento, «suma» almacena la representación de
  *       un número natural equivalente a la suma de los naturales representados
- *       por «a» y «b». Sea «s» el número de dígitos de suma. La componente
- *       suma[0] representa las unidades de la suma, la componente suma[1]
- *       representa las decenas y así sucesivamente.
+ *       por «a» y «b». La componente suma[0] representa las unidades de la
+ *       suma, la componente suma[1] representa las decenas y así sucesivamente.
  */
 void sumar(const unsigned a[], const unsigned b[], unsigned suma[]) {
     // Por completar
