@@ -50,15 +50,13 @@ string convertirAString(const unsigned numero[]) {
     }
     if (i < 0) {
         return "0";
-    }
-    else {
+    } else {
         string resultado = "";
         resultado.reserve(NUM_DIGITOS);
         while (i >= 0) {
             if (numero[i] <= 9 || numero[i] == VALOR_INDEFINIDO) {
                 resultado += numero[i] + '0';
-            }
-            else {
+            } else {
                 resultado += '(' + to_string(numero[i]) + ')';
             }
             i--;
@@ -126,13 +124,11 @@ void escribirResultadoPrueba(const string valorEsperado, const string valorCalcu
     if (valorEsperado == valorCalculado) {
         if (comprobarTestigo(testigo1) && comprobarTestigo(testigo2)) {
             cout << "correcta." << endl;
-        }
-        else {
+        } else {
             cout << "incorrecta: el valor calculado es el correcto, pero ha "
                  << "modificado memoria fuera de los límites del vector. " << endl;
         }
-    }
-    else {
+    } else {
         escribirResultadoPrueba(valorEsperado, valorCalculado);
     }
 }
@@ -160,13 +156,11 @@ void escribirResultadoPrueba(const bool valorEsperado, const bool valorCalculado
     if (valorEsperado == valorCalculado) {
         if (comprobarTestigo(testigo1) && comprobarTestigo(testigo2)) {
             cout << "correcta." << endl;
-        }
-        else {
+        } else {
             cout << "incorrecta: el valor calculado es el correcto, pero ha "
                  << "modificado memoria fuera de los límites del vector. " << endl;
         }
-    }
-    else {
+    } else {
         escribirResultadoPrueba(valorEsperado, valorCalculado);
     }
 }
