@@ -10,9 +10,6 @@
             "label": "Compilar proyecto «fibonacci»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make",
-            },
             "args": [
                 "fibonacci"
             ],
@@ -37,9 +34,6 @@
             "label": "Compilar proyecto «primera-potencia»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make",
-            },
             "args": [
                 "primera-potencia"
             ],
@@ -61,9 +55,6 @@
             "label": "Compilar proyecto «lychrel»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make",
-            },
             "args": [
                 "lychrel"
             ],
@@ -85,9 +76,6 @@
             "label": "Compilar tests del módulo «naturales-grandes»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make",
-            },
             "args": [
                 "naturales-grandes-test"
             ],
@@ -108,9 +96,6 @@
             "label": "Limpiar resultados de compilación",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "clean"
             ],
