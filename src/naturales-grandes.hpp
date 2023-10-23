@@ -1,11 +1,11 @@
-﻿/******************************************************************************\
+﻿/*********************************************************************************************\
  * Programación 1. Práctica 4
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Ultima revisión: 2 de noviembre de 2022
  * Resumen: Fichero de interfaz «naturales-grandes.hpp» de un módulo denominado
- *          «naturales-grandes» para trabajar con números naturales de gran
- *          magnitud en la 4ª práctica.
-\******************************************************************************/
+ *          «naturales-grandes» para trabajar con números naturales de gran magnitud en la
+ *          4ª práctica.
+\*********************************************************************************************/
 
 #pragma once
 

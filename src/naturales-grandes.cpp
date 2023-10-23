@@ -1,11 +1,11 @@
-﻿/******************************************************************************\
+﻿/*********************************************************************************************\
  * Programación 1. Práctica 4
  * Autores: ------------- ¡PON AQUÍ TU NOMBRE! -------------
  * Ultima revisión: 
- * Resumen: Fichero de implementación «naturales-grandes.cpp» de un módulo
- *          denominado «naturales-grandes» para trabajar con números naturales 
- *          de gran magnitud en la 4ª práctica.
-\******************************************************************************/
+ * Resumen: Fichero de implementación «naturales-grandes.cpp» de un módulo denominado
+ *          «naturales-grandes» para trabajar con números naturales de gran magnitud en la
+ *          4ª práctica.
+\*********************************************************************************************/
 
 #include "naturales-grandes.hpp"
 
