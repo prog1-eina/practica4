@@ -106,5 +106,57 @@
             ],
             "preLaunchTask": "Compilar tests del módulo «naturales-grandes»"
         },
-    ]
+        {
+            "name": "Depurar programa de ejemplo «suma-unsigned»",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/suma-unsigned",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "osx": {
+                "type": "lldb",
+                "MIMode": "lldb",
+                "args": ["-arg1", "-arg2"],
+                "console": "externalTerminal",
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compilar programa de ejemplo «suma-unsigned»"
+        },
+        {
+            "name": "Depurar programa de ejemplo «suma-nat-grandes»",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/suma-nat-grandes",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "osx": {
+                "type": "lldb",
+                "MIMode": "lldb",
+                "args": ["-arg1", "-arg2"],
+                "console": "externalTerminal",
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compilar programa de ejemplo «suma-nat-grandes»"
+        },
+   ]
 }

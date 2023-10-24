@@ -10,11 +10,12 @@
 ## DIRECTORIOS
 SOURCE_DIR = src
 TEST_DIR = test
+EXAMPLE_DIR = example
 TESTING_LIB_DIR = ../practica3/test/testing-prog1
 BUILD_DIR = build
 BIN_DIR = bin
 
-VPATH = $(SOURCE_DIR) $(TEST_DIR) $(TESTING_LIB_DIR)
+VPATH = $(SOURCE_DIR) $(TEST_DIR) $(TESTING_LIB_DIR) $(EXAMPLE_DIR)
 
 ## COMPILADOR Y OPCIONES DE COMPILACIÓN:
 CXX = g++
@@ -30,8 +31,13 @@ POTENCIA_OBJECTS =  $(addprefix $(BUILD_DIR)/, primera-potencia-main.o \
 LYCHREL_OBJECTS =  $(addprefix $(BUILD_DIR)/, lychrel-main.o \
                                                 naturales-grandes.o)
 
+SUMA_NAT_GRANDES_OBJECTS =  $(addprefix $(BUILD_DIR)/, suma-nat-grandes.o \
+                                                naturales-grandes.o)
+
 TESTING_OBJECTS = $(addprefix $(BUILD_DIR)/, naturales-grandes-test-main.o \
         naturales-grandes-test.o testing-prog1.o naturales-grandes.o)
+
+
 
 ################################################################################
 ## Reglas del fichero «Makefile»
@@ -47,6 +53,13 @@ lychrel: $(LYCHREL_OBJECTS) | $(BIN_DIR)
 
 naturales-grandes-test: $(TESTING_OBJECTS) | $(BIN_DIR)
 	$(CXX) $(CXXFLAGS) $(TESTING_OBJECTS) -o $(BIN_DIR)/naturales-grandes-test
+
+suma-unsigned: example/suma-unsigned.cpp | $(BIN_DIR)
+	$(CXX) $(CXXFLAGS) example/suma-unsigned.cpp -o $(BIN_DIR)/$@ 
+
+suma-nat-grandes: $(SUMA_NAT_GRANDES_OBJECTS) | $(BIN_DIR)
+	$(CXX) -g $(SUMA_NAT_GRANDES_OBJECTS) -o $(BIN_DIR)/$@ 
+
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@  

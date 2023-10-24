@@ -71,7 +71,6 @@
             "dependsOn": "Compilar proyecto «lychrel»",
             "problemMatcher": ["$gcc"],
         },
-
         {
             "label": "Compilar tests del módulo «naturales-grandes»",
             "type": "shell",
@@ -90,6 +89,44 @@
                 "command": "chcp 65001 ; bin\\naturales-grandes-test",
             },
             "dependsOn": "Compilar tests del módulo «naturales-grandes»",
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Compilar programa de ejemplo «suma-unsigned»",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "suma-unsigned"
+            ],
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Ejecutar programa de ejemplo «suma-unsigned»",
+            "type": "shell",
+            "command": "bin/suma-unsigned",
+            "windows": {
+                "command": "chcp 65001 ; bin\\suma-unsigned",
+            },
+            "dependsOn": "Compilar programa de ejemplo «suma-unsigned»",
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Compilar programa de ejemplo «suma-nat-grandes»",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "suma-nat-grandes"
+            ],
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Ejecutar programa de ejemplo «suma-nat-grandes»",
+            "type": "shell",
+            "command": "bin/suma-nat-grandes",
+            "windows": {
+                "command": "chcp 65001 ; bin\\suma-nat-grandes",
+            },
+            "dependsOn": "Compilar programa de ejemplo «suma-nat-grandes»",
             "problemMatcher": ["$gcc"],
         },
         {
