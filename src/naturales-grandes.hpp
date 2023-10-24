@@ -39,7 +39,7 @@ bool sonIguales(const unsigned a[], const unsigned b[]);
  *       representa las unidades de «natural», la componente natural[1] las decenas de
  *       «natural» y así, sucesivamente. Las componentes de índices superiores al
  *       correspondiente al dígito más significativo almacenan el valor 0. «natural» tiene
- *        «NUM_DIGITOS» componentes.
+ *       «NUM_DIGITOS» componentes.
  * Post: Devuelve el número de cifras de «natural» cuando se escribe en base 10 sin ceros a la
  *       izquierda.
  */
