@@ -97,6 +97,7 @@ int main() {
     probarCalcularImagen("1", "1");
     probarCalcularImagen("18", "81");
     probarCalcularImagen("903", "309");
+    probarCalcularImagen("92719", "91729");
     probarCalcularImagen("123456789", "987654321");
     probarCalcularImagen("1030507090", "907050301");
     probarCalcularImagen("123412345678901234567890", "98765432109876543214321");
@@ -109,6 +110,7 @@ int main() {
     probarEsCapicua("101", true);
     probarEsCapicua("91718", false);
     probarEsCapicua("91719", true);
+    probarEsCapicua("92719", false);
     probarEsCapicua("12341234567890123456789", false);
     probarEsCapicua("123412345678909876543214321", true);
 
