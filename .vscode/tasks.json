@@ -1,7 +1,7 @@
 {
     "tasks": [
         {
-            "label": "Open Terminal",
+            "label": "Terminal (solo macOS, para dar permisos a VSC)",
             "type": "shell",
             "command": "osascript -e 'tell application \"Terminal\"\ndo script \"echo hello\"\nend tell'",
             "problemMatcher": []
