@@ -1,7 +1,7 @@
 ﻿/******************************************************************************\
  * Programación 1. Práctica 4
  * Autor: Miguel Ángel Latre Abadía
- * Ultima revisión: 2 de noviembre de 2022
+ * Última revisión: 2 de noviembre de 2022
  * Resumen: Fichero de implementación «naturales-grandes-test.cpp» de un módulo
  *          denominado «naturales-grandes-test» para hacer de pruebas de las 
  *          funciones definidas en el módulo «naturales-grandes» de la 4.ª 
