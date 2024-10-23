@@ -23,8 +23,12 @@ CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_DIR) -I$(TESTING_LIB_DIR)
 
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):
+FACTORIAL_OBJECTS =  $(addprefix $(BUILD_DIR)/, factorial-main.o \
+                                                naturales-grandes.o)
+
 FIBONACCI_OBJECTS =  $(addprefix $(BUILD_DIR)/, fibonacci-main.o \
                                                 naturales-grandes.o)
+
 POTENCIA_OBJECTS =  $(addprefix $(BUILD_DIR)/, primera-potencia-main.o \
                                                 naturales-grandes.o)
 
@@ -37,10 +41,14 @@ SUMA_NAT_GRANDES_OBJECTS =  $(addprefix $(BUILD_DIR)/, suma-nat-grandes.o \
 TESTING_OBJECTS = $(addprefix $(BUILD_DIR)/, naturales-grandes-test-main.o \
         naturales-grandes-test.o testing-prog1.o naturales-grandes.o)
 
-
+OBJECTS = $(FACTORIAL_OBJECTS) $(FIBONACCI_OBJECTS) $(POTENCIA_OBJECTS) \
+          $(LYCHREL_OBJECTS) $(SUMA_NAT_GRANDES_OBJECTS) $(TESTING_OBJECTS)
 
 ################################################################################
 ## Reglas del fichero «Makefile»
+
+factorial: $(FACTORIAL_OBJECTS) | $(BIN_DIR)
+	$(CXX) -g $(FACTORIAL_OBJECTS) -o $(BIN_DIR)/$@ 
 
 fibonacci: $(FIBONACCI_OBJECTS) | $(BIN_DIR)
 	$(CXX) -g $(FIBONACCI_OBJECTS) -o $(BIN_DIR)/$@ 
@@ -80,5 +88,5 @@ ifeq ($(OS),Windows_NT)
 	if exist $(BIN_DIR) rmdir /S /Q $(BIN_DIR)
 	if exist $(BUILD_DIR) rmdir /S /Q $(BUILD_DIR)
 else
-	rm -f $(FIBONACCI_OBJECTS) $(POTENCIA_OBJECTS) $(LYCHREL_OBJECTS) $(TESTING_OBJECTS) $(BIN_DIR)/*
+	rm -f $(OBJECTS) $(BIN_DIR)/*
 endif

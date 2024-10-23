@@ -1,10 +1,10 @@
 ﻿/*********************************************************************************************\
  * Programación 1. Práctica 4
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 2 de noviembre de 2022
+ * Última revisión: 23 de octubre de 2024
  * Resumen: Fichero de interfaz «naturales-grandes.hpp» de un módulo denominado
- *          «naturales-grandes» para trabajar con números naturales de gran magnitud en la
- *          4ª práctica.
+ *          «naturales-grandes» para trabajar con números naturales de gran magnitud en la 4ª
+ *          práctica.
 \*********************************************************************************************/
 
 #pragma once
@@ -39,7 +39,7 @@ bool sonIguales(const unsigned a[], const unsigned b[]);
  *       representa las unidades de «natural», la componente natural[1] las decenas de
  *       «natural» y así, sucesivamente. Las componentes de índices superiores al
  *       correspondiente al dígito más significativo almacenan el valor 0. «natural» tiene
- *       «NUM_DIGITOS» componentes.
+ *        «NUM_DIGITOS» componentes.
  * Post: Devuelve el número de cifras de «natural» cuando se escribe en base 10 sin ceros a la
  *       izquierda.
  */
@@ -78,19 +78,34 @@ void convertir(const unsigned numero, unsigned naturalGrande[]);
 unsigned valor(const unsigned naturalGrande[]);
 
 /*
- * Pre:  «a» y «b» almacenan las representaciones de sendos números naturales. Las componentes
- *       a[0] y b[0] representan las unidades del natural «a» y «b», respectivamente, las
- *       componentes a[1] y b[1], las decenas y así sucesivamente. Las componentes de índices
- *       superiores a los correspondientes a los dígitos más significativos almacenan el
- *       valor 0. La suma de los números representados por «a» y «b» tiene menos de
- *       «NUM_DIGITOS» dígitos.
+ * Pre:  «a» y «b» almacenan las representaciones de sendos números naturales. 
+ *       Las componentes a[0] y b[0] representan las unidades del natural «a» y «b»,
+ *       respectivamente, las componentes a[1] y b[1], las decenas y así sucesivamente. Las
+ *       componentes de índices superiores a los correspondientes a los dígitos más
+ *       significativos almacenan el valor 0.
  *       Los vectores «a», «b» y «suma» tienen «NUM_DIGITOS» componentes.
- * Post: Tras ejecutar este procedimiento, «suma» almacena la representación de un número
- *       natural equivalente a la suma de los naturales representados por «a» y «b».
- *       La componente suma[0] representa las unidades de la suma, la componente suma[1]
- *       representa las decenas y así sucesivamente.
+ * Post: Si la suma de los naturales representados por «a» y «b» tiene «NUM_DIGITOS» o menos,
+ *       tras ejecutarse este procedimiento, «suma» almacena la representación del número
+ *       natural equivalente a la suma de los naturales representados por «a» y «b» y el valor
+ *       de «desbordamiento» es «false». En el caso contrario, el valor de «suma» no está
+ *       definido y el valor de «desbordamiento» es «true». 
  */
-void sumar(const unsigned a[], const unsigned b[], unsigned suma[]);
+void sumar(const unsigned a[], const unsigned b[], unsigned suma[], bool &desbordamiento);
+
+/*
+ * Pre:  «a» almacena la representación de un número natural. La componente a[0] representa las
+ *       unidades del natural «a», la componente a[1], las decenas y así sucesivamente. Las
+ *       componentes de índices superiores a los correspondientes a los dígitos más
+ *       significativos almacenan el valor 0.
+ *       Los vectores «a» y «producto» tienen «NUM_DIGITOS» componentes.
+ * Post: Si el producto de los naturales representados por «a» y el valor de «b» tiene
+ *       «NUM_DIGITOS» o menos, tras ejecutarse este procedimiento, «producto» almacena la
+ *       representación del número natural equivalente al producto de los naturales
+ *       representados por «a» y el valor de «b» y el valor de «desbordamiento» es «false».
+ *       En el caso contrario, el valor de «suma» no está definido y el valor de
+ *       «desbordamiento» es «true».
+ */
+void multiplicar(const unsigned a[], const unsigned b, unsigned producto[], bool &desbordamiento);
 
 /*
  * Pre:  «natural» almacena la representación de un número natural. La componente natural[0]

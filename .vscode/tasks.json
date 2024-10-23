@@ -82,7 +82,6 @@
                 "naturales-grandes-test"
             ],
             "problemMatcher": ["$gcc"],
-            "group": "test",
         },
         {
             "label": "Ejecutar tests del módulo «naturales-grandes»",
@@ -94,6 +93,10 @@
             },
             "dependsOn": "Compilar tests del módulo «naturales-grandes»",
             "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         },
         {
             "label": "Compilar programa de ejemplo «suma-unsigned»",

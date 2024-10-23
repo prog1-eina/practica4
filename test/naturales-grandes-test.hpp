@@ -1,13 +1,13 @@
-﻿/*********************************************************************************
+﻿/************************************************************************************\
  * Programación 1. Práctica 4
  * Autor: Miguel Ángel Latre Abadía
- * Última revisión: 2 de noviembre de 2022
+ * Última revisión: 23 de octubre de 2024
  * Resumen: Fichero de interfaz «naturales-grandes-test.hpp» de un módulo
  *          denominado «naturales-grandes-test» para hacer de pruebas de las
  *          funciones definidas en el módulo «naturales-grandes» de la 4.ª
  *          práctica.
  * Codificación de caracteres original de este fichero: UTF-8 con BOM
-\********************************************************************************/
+\************************************************************************************/
 
 #include <string>
 using namespace std;
@@ -23,25 +23,44 @@ using namespace std;
  *       como argumento, informa de ello también.
  *       En caso negativo, informa acerca del valor incorrecto que calcula la función
  *       «convertir».
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarConvertir(const unsigned n, const string valorEsperado);
+void probarConvertir(const unsigned n, const string valorEsperado, bool &todoOk);
 
 /*
- * Pre:  «aStr», «bStr» y «valorEsperado» son cadenas de caracteres que contiene 
- *       la representación decimal de números naturales (sin signo).
- *       «valorEsperado», en particular, representa la suma de «aStr» y «bStr».
- * Post: Escribe un mensaje en pantalla informando acerca de si la función
- *       «sumar», invocada con los vectores que representan los valores como
- *       números grandes de los argumentos «aStr» y «bStr», calcula el valor
- *       correcto «valorEsperado».
- *       En caso afirmativo, si este procedimiento detecta que la función «sumar»
- *       ha modificado memoria fuera de los límites de los vectores que se le han
- *       pasado como argumentos, informa de ello también.
- *       En caso negativo, informa acerca del valor incorrecto que calcula la función
- *       «sumar».
+ * Pre:  «aStr», «bStr» y «valorEsperado» son cadenas de caracteres que contienen las
+ *       representaciones decimales de tres números naturales (sin signo). «valorEsperado», en
+ *       particular, representa la suma de «aStr» y «bStr».
+ * Post: Escribe un mensaje en pantalla informando acerca de si el procedimiento «sumar»,
+ *       invocado con los vectores que representan los valores como números grandes de los
+ *       argumentos «aStr» y «bStr», calcula el valor correcto «valorEsperado» y, en todo caso,
+ *       el «desbordaEsperado» correcto. En caso afirmativo, si este procedimiento detecta que
+ *       el procedimiento «sumar» ha modificado memoria fuera de los límites de los vectores
+ *       que se le han pasado como argumentos, informa de ello también. En caso negativo,
+ *       informa acerca del valor o valores incorrectos que calcula el procedimiento «sumar».
+ *       Si se han calculado los resultados correctos, el valor de «todoOk» no se modifica y en
+ *       caso contrario, se establece en «false».
  */
 void probarSumar(const string aStr, const string bStr, 
-                 const string valorEsperado);
+                 const string valorEsperado, const bool desbordaEsperado, bool &todoOk);
+
+/*
+ * Pre:  «aStr» y «valorEsperado» son cadenas de caracteres que contienen las representaciones
+ *       decimales de dos números naturales (sin signo). «valorEsperado», en particular,
+ *       representa el producto de de «aStr» por «b».
+ * Post: Escribe un mensaje en pantalla informando acerca de si el procedimiento «multiplicar»,
+ *       invocado con el vector que representa el valor como número grande del argumento «aStr»
+ *       y el valor de «b», calcula el valor correcto «valorEsperado» y, en todo caso,
+ *       el «desbordaEsperado» correcto. En caso afirmativo, si este procedimiento detecta que
+ *       el procedimiento «multiplicar» modifica memoria fuera de los límites de los vectores
+ *       que se le han pasado como argumentos, informa de ello también. En caso negativo,
+ *       informa acerca del valor o valores incorrectos que calcula el procedimiento «sumar».
+ *       Si se han calculado los resultados correctos, el valor de «todoOk» no se modifica y en
+ *       caso contrario, se establece en «false».
+ */
+void probarMultiplicar(const string aStr, const unsigned b, 
+                       const string valorEsperado, const bool desbordaEsperado, bool &todoOk);
 
 /*
  * Pre:  «numero» es una cadena de caracteres que contiene la representación
@@ -53,8 +72,10 @@ void probarSumar(const string aStr, const string bStr,
  *       «valorEsperado». 
  *       En caso negativo, informa acerca del valor incorrecto que calcula la función
  *       «valor».
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarValor(const string numero, const unsigned valorEsperado);
+void probarValor(const string numero, const unsigned valorEsperado, bool &todoOk);
 
 /*
  * Pre:  «numero» es una cadena de caracteres que contiene la representación
@@ -69,8 +90,10 @@ void probarValor(const string numero, const unsigned valorEsperado);
  *       se le ha pasado como argumento, informa de ello también.
  *       En caso negativo, informa acerca del valor incorrecto que calcula la función
  *       «calcularImagen».
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarCalcularImagen(const string numero, const string valorEsperado);
+void probarCalcularImagen(const string numero, const string valorEsperado, bool &todoOk);
 
 /*
  * Pre:  «numero» almacena una cadena de caracteres con la secuencia de
@@ -85,8 +108,10 @@ void probarCalcularImagen(const string numero, const string valorEsperado);
  *       como argumento, informa de ello también.
  *       En caso negativo, informa acerca del valor incorrecto que calcula la función
  *       «esCapicua».
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarEsCapicua(const string numero, const bool valorEsperado);
+void probarEsCapicua(const string numero, const bool valorEsperado, bool &todoOk);
 
 /*
  * Pre:  «numeroStr» es una cadena de caracteres que contiene la representación
@@ -100,8 +125,10 @@ void probarEsCapicua(const string numero, const bool valorEsperado);
  *       pasado como argumento, informa de ello también.
  *       En caso negativo, informa acerca del valor incorrecto que calcula la función
  *       «copiar».
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarCopiar(const string numeroStr);
+void probarCopiar(const string numeroStr, bool &todoOk);
 
 /*
  * Pre:  «aStr» y «bStr» son cadenas de caracteres que contienen la  
@@ -112,9 +139,11 @@ void probarCopiar(const string numeroStr);
  *       «sonIguales», invocada con los argumentos «aStr» y «bStr», devuelve el
  *       valor correcto «valorEsperado». En caso negativo, informa también
  *       acerca del valor incorrecto que devuelve la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarSonIguales(const string aStr, const string bStr, 
-                      const bool valorEsperado);
+                      const bool valorEsperado, bool &todoOk);
 
 /*
  * Pre:  «numero» es una cadena de caracteres que contiene la representación
@@ -125,5 +154,14 @@ void probarSonIguales(const string aStr, const string bStr,
  *       grande del argumento «numero», ha calculado el valor correcto
  *       «valorEsperado». En caso negativo, ha informado también acerca del
  *       valor incorrecto que devuelve la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarNumCifras(const string numero, const unsigned valorEsperado);
+void probarNumCifras(const string numero, const unsigned valorEsperado, bool &todoOk);
+
+/*
+ * Pre:  ---
+ * Post: Devuelve una cadena de caracteres compuesta por NUM_DIGITOS repeticiones del 
+ *       carácter '9'.
+ */
+string milNueves();
