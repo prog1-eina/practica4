@@ -7,17 +7,47 @@
             "problemMatcher": []
         },
         {
+            "label": "Compilar proyecto «factorial»",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "factorial"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Ejecutar proyecto «factorial»",
+            "type": "shell",
+            "command": "bin/factorial",
+            "windows": {
+                "command": "cmd",
+                "args": [
+                    "/c",
+                    "chcp 65001 && bin\\factorial.exe"
+                ]
+            },
+            "dependsOn": "Compilar proyecto «factorial»",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
             "label": "Compilar proyecto «fibonacci»",
             "type": "shell",
             "command": "make",
             "args": [
                 "fibonacci"
             ],
-            "problemMatcher": ["$gcc"],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
         },
         {
             "label": "Ejecutar proyecto «fibonacci»",
@@ -25,12 +55,16 @@
             "command": "bin/fibonacci",
             "windows": {
                 "command": "cmd",
-                "args": ["/c", "chcp 65001 && bin\\fibonacci.exe"]
+                "args": [
+                    "/c",
+                    "chcp 65001 && bin\\fibonacci.exe"
+                ]
             },
             "dependsOn": "Compilar proyecto «fibonacci»",
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ]
         },
-
         {
             "label": "Compilar proyecto «primera-potencia»",
             "type": "shell",
@@ -38,8 +72,10 @@
             "args": [
                 "primera-potencia"
             ],
-            "problemMatcher": ["$gcc"],
-            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
         },
         {
             "label": "Ejecutar proyecto «primera-potencia»",
@@ -47,12 +83,16 @@
             "command": "bin/primera-potencia",
             "windows": {
                 "command": "cmd",
-                "args": ["/c", "chcp 65001 && bin\\primera-potencia.exe"]
+                "args": [
+                    "/c",
+                    "chcp 65001 && bin\\primera-potencia.exe"
+                ]
             },
             "dependsOn": "Compilar proyecto «primera-potencia»",
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ]
         },
-
         {
             "label": "Compilar proyecto «lychrel»",
             "type": "shell",
@@ -60,8 +100,10 @@
             "args": [
                 "lychrel"
             ],
-            "problemMatcher": ["$gcc"],
-            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
         },
         {
             "label": "Ejecutar proyecto «lychrel»",
@@ -69,10 +111,15 @@
             "command": "bin/lychrel",
             "windows": {
                 "command": "cmd",
-                "args": ["/c", "chcp 65001 && bin\\lychrel.exe"]
+                "args": [
+                    "/c",
+                    "chcp 65001 && bin\\lychrel.exe"
+                ]
             },
             "dependsOn": "Compilar proyecto «lychrel»",
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ],
         },
         {
             "label": "Compilar tests del módulo «naturales-grandes»",
@@ -81,7 +128,9 @@
             "args": [
                 "naturales-grandes-test"
             ],
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ]
         },
         {
             "label": "Ejecutar tests del módulo «naturales-grandes»",
@@ -89,10 +138,15 @@
             "command": "bin/naturales-grandes-test",
             "windows": {
                 "command": "cmd",
-                "args": ["/c", "chcp 65001 && bin\\naturales-grandes-test"]
+                "args": [
+                    "/c",
+                    "chcp 65001 && bin\\naturales-grandes-test"
+                ]
             },
             "dependsOn": "Compilar tests del módulo «naturales-grandes»",
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "test",
                 "isDefault": true
@@ -105,7 +159,9 @@
             "args": [
                 "suma-unsigned"
             ],
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ]
         },
         {
             "label": "Ejecutar programa de ejemplo «suma-unsigned»",
@@ -113,10 +169,15 @@
             "command": "bin/suma-unsigned",
             "windows": {
                 "command": "cmd",
-                "args": ["/c", "chcp 65001 && bin\\suma-unsigned"]
+                "args": [
+                    "/c",
+                    "chcp 65001 && bin\\suma-unsigned"
+                ]
             },
             "dependsOn": "Compilar programa de ejemplo «suma-unsigned»",
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ]
         },
         {
             "label": "Compilar programa de ejemplo «suma-nat-grandes»",
@@ -125,7 +186,9 @@
             "args": [
                 "suma-nat-grandes"
             ],
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ]
         },
         {
             "label": "Ejecutar programa de ejemplo «suma-nat-grandes»",
@@ -133,10 +196,15 @@
             "command": "bin/suma-nat-grandes",
             "windows": {
                 "command": "cmd",
-                "args": ["/c", "chcp 65001 && bin\\suma-nat-grandes"]
+                "args": [
+                    "/c",
+                    "chcp 65001 && bin\\suma-nat-grandes"
+                ]
             },
             "dependsOn": "Compilar programa de ejemplo «suma-nat-grandes»",
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ]
         },
         {
             "label": "Limpiar resultados de compilación",
@@ -145,9 +213,11 @@
             "args": [
                 "clean"
             ],
-            "problemMatcher": ["$gcc"],
-            "group": "build",
-       },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
     ],
     "presentation": {
         "showReuseMessage": true,
