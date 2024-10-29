@@ -46,11 +46,11 @@ bool sonIguales(const unsigned a[], const unsigned b[]);
 unsigned numCifras(const unsigned natural[]);
 
 /*
- * Pre:  «natural» almacena la representación de un número natural grande. Sea «n» el número
- *       de dígitos de «natural». La componente natural[0] representa las unidades de
- *       «natural», la componente natural[1] las decenas de «natural» y así, sucesivamente.
- *       Las componentes de índices superiores al correspondiente al dígito más significativo
- *       almacenan el valor 0. «natural» tiene «NUM_DIGITOS» componentes.
+ * Pre:  «natural» almacena la representación de un número natural grande. La componente
+ *       natural[0] representa las unidades de «natural», la componente natural[1] las decenas
+ *       de «natural» y así, sucesivamente. Las componentes de índices superiores al
+ *       correspondiente al dígito más significativo almacenan el valor 0.
+ *       «natural» tiene «NUM_DIGITOS» componentes.
  * Post: Tras ejecutar este procedimiento, se ha escrito en la pantalla el número natural
  *       representado por «natural» (sin ceros a la izquierda).
  */
