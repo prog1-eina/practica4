@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Programación 1. Práctica 4
  * Autores: Miguel Ángel Latre
  * Última revisión: 23 de octubre de 2024
@@ -10,7 +10,7 @@
  *       «naturales-grandes-test» convierten estas cadenas de caracteres a los
  *       vectores de enteros sin signo que se utilizan en el módulo
  *       «naturales-grandes».
-\******************************************************************************/
+ *****************************************************************************/
 
 #include <iostream>
 #include "naturales-grandes-test.hpp"
@@ -27,7 +27,8 @@ int main() {
     probarCopiar("0", todoOk);
     probarCopiar("1", todoOk);
     probarCopiar("123", todoOk);
-    probarCopiar("123456789012345678901234567890123456789012345678901234567890", todoOk);
+    probarCopiar("12345678901234567890123456789012345678901234567890123456789",
+                 todoOk);
 
     probarSonIguales("0", "0", true, todoOk);
     probarSonIguales("0", "1", false, todoOk);
@@ -43,10 +44,11 @@ int main() {
     probarSonIguales("1234567890", "12345678901234567890", false, todoOk);
     probarSonIguales("1234567890123456789012345678901234567890", 
                      "1234567890123456789012345678901234567890", true, todoOk);
-    probarSonIguales("123456789012345678901234567890123456789012345678901234567890", 
-                     "1234567890123456789012345678901234567890", false, todoOk);
-    probarSonIguales("1234567890123456789012345678901234567890", 
-                     "123456789012345678901234567890123456789012345678901234567890", false, todoOk);
+    probarSonIguales("1234567890123456789012345678901234567890123456789012345",
+                     "123456789012345678901234567890123456789", false, todoOk);
+    probarSonIguales("123456789012345678901234567890123456789", 
+                     "1234567890123456789012345678901234567890123456789012345",
+                     false, todoOk);
 
     probarNumCifras("0", 1, todoOk);
     probarNumCifras("1", 1, todoOk);
@@ -56,7 +58,8 @@ int main() {
     probarNumCifras("100", 3, todoOk);
     probarNumCifras("123456789", 9, todoOk);
     probarNumCifras("123456789012345678901234567890", 30, todoOk);
-    probarNumCifras("12345678901234567890123456789012345678901234567890", 50, todoOk);
+    probarNumCifras("12345678901234567890123456789012345678901234567890", 50,
+                    todoOk);
 
     probarConvertir(0, "0", todoOk);
     probarConvertir(1, "1", todoOk);
@@ -90,14 +93,21 @@ int main() {
     probarSumar("21", "189", "210", false, todoOk);
     probarSumar("9999", "1", "10000", false, todoOk);
     probarSumar("1", "9999", "10000", false, todoOk);
-    // De más de 20 dígitos (no representables como unsigned ni como unsigned long long)
-    probarSumar("123412345678901234567890", "10", "123412345678901234567900", false, todoOk);
-    probarSumar("10", "123412345678901234567890", "123412345678901234567900", false, todoOk);
-    probarSumar("999999999999999999999999", "1", "1000000000000000000000000", false, todoOk);
-    probarSumar("1", "999999999999999999999999", "1000000000000000000000000", false, todoOk);
+    // De más de 20 dígitos
+    // (no representables como unsigned ni como unsigned long long)
+    probarSumar("123412345678901234567890", "10", "123412345678901234567900",
+                false, todoOk);
+    probarSumar("10", "123412345678901234567890", "123412345678901234567900",
+                false, todoOk);
+    probarSumar("999999999999999999999999", "1", "1000000000000000000000000",
+                false, todoOk);
+    probarSumar("1", "999999999999999999999999", "1000000000000000000000000",
+                false, todoOk);
     // Con desbordamiento
-    probarSumar(milNueves(), "1", "No importa la suma porque hay desbordamiento", true, todoOk);
-    probarSumar("1", milNueves(), "No importa la suma porque hay desbordamiento", true, todoOk);
+    probarSumar(milNueves(), "1",
+                "No importa la suma porque hay desbordamiento", true, todoOk);
+    probarSumar("1", milNueves(),
+                "No importa la suma porque hay desbordamiento", true, todoOk);
 
     // Multiplicaciones por 0
     probarMultiplicar("0", 0, "0", false, todoOk);
@@ -126,12 +136,17 @@ int main() {
     probarMultiplicar("8742", 9365, "81868830", false, todoOk);
     probarMultiplicar("2", 402, "804", false, todoOk);
     probarMultiplicar("9", 1001, "9009", false, todoOk);
-    // De más de 20 dígitos (no representables como unsigned ni como unsigned long long)
-    probarMultiplicar("123412345678901234567890", 10, "1234123456789012345678900", false, todoOk);
-    probarMultiplicar("999999999999999999999999", 1, "999999999999999999999999", false, todoOk);
-    probarMultiplicar("12341234567890123456", 12345678, "152360908097640603568023168", false, todoOk);
+    // De más de 20 dígitos
+    // (no representables como unsigned ni como unsigned long long)
+    probarMultiplicar("123412345678901234567890", 10,
+                      "1234123456789012345678900", false, todoOk);
+    probarMultiplicar("999999999999999999999999", 1,
+                      "999999999999999999999999", false, todoOk);
+    probarMultiplicar("12341234567890123456", 12345678,
+                      "152360908097640603568023168", false, todoOk);
     // Con desbordamiento
-    probarMultiplicar(milNueves(), 2, "No importa el producto porque hay desbordamiento", true, todoOk);
+    probarMultiplicar(milNueves(), 2,
+            "No importa el producto porque hay desbordamiento", true, todoOk);
 
     probarCalcularImagen("0", "0", todoOk);
     probarCalcularImagen("1", "1", todoOk);
@@ -140,7 +155,8 @@ int main() {
     probarCalcularImagen("92719", "91729", todoOk);
     probarCalcularImagen("123456789", "987654321", todoOk);
     probarCalcularImagen("1030507090", "907050301", todoOk);
-    probarCalcularImagen("123412345678901234567890", "98765432109876543214321", todoOk);
+    probarCalcularImagen("123412345678901234567890", "98765432109876543214321",
+                         todoOk);
 
     probarEsCapicua("0", true, todoOk);
     probarEsCapicua("1", true, todoOk);
@@ -160,7 +176,8 @@ int main() {
              << ESCAPE_NORMAL << endl;
         return 0;
     } else {
-        cout << ESCAPE_ROJO_NEGRITA << "Se han detectado errores en las pruebas."
+        cout << ESCAPE_ROJO_NEGRITA
+             << "Se han detectado errores en las pruebas."
              << ESCAPE_NORMAL << endl;
         return 1;
     }
