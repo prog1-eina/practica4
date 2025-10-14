@@ -13,13 +13,12 @@
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "osx": {
-                "type": "lldb",
                 "MIMode": "lldb",
                 "args": ["-arg1", "-arg2"],
-                "console": "externalTerminal",
+                "externalConsole": true,
             },
             "setupCommands": [
                 {
@@ -39,13 +38,12 @@
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "osx": {
-                "type": "lldb",
                 "MIMode": "lldb",
                 "args": ["-arg1", "-arg2"],
-                "console": "externalTerminal",
+                "externalConsole": true,
             },
             "setupCommands": [
                 {
@@ -65,13 +63,12 @@
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "osx": {
-                "type": "lldb",
                 "MIMode": "lldb",
                 "args": ["-arg1", "-arg2"],
-                "console": "externalTerminal",
+                "externalConsole": true,
             },
             "setupCommands": [
                 {
@@ -91,13 +88,12 @@
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "osx": {
-                "type": "lldb",
                 "MIMode": "lldb",
                 "args": ["-arg1", "-arg2"],
-                "console": "externalTerminal",
+                "externalConsole": true,
             },
             "setupCommands": [
                 {
@@ -115,13 +111,12 @@
             "program": "${workspaceFolder}/bin/naturales-grandes-test",
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "osx": {
-                "type": "lldb",
                 "MIMode": "lldb",
                 "args": ["-arg1", "-arg2"],
-                "console": "externalTerminal",
+                "externalConsole": true,
             },
             "setupCommands": [
                 {
@@ -141,13 +136,12 @@
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "osx": {
-                "type": "lldb",
                 "MIMode": "lldb",
                 "args": ["-arg1", "-arg2"],
-                "console": "externalTerminal",
+                "externalConsole": true,
             },
             "setupCommands": [
                 {
@@ -167,13 +161,12 @@
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "osx": {
-                "type": "lldb",
                 "MIMode": "lldb",
                 "args": ["-arg1", "-arg2"],
-                "console": "externalTerminal",
+                "externalConsole": true,
             },
             "setupCommands": [
                 {
@@ -184,5 +177,5 @@
             ],
             "preLaunchTask": "Compilar programa de ejemplo «suma-nat-grandes»"
         },
-   ]
+    ]
 }
