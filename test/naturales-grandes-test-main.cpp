@@ -170,15 +170,10 @@ int main() {
     probarEsCapicua("12341234567890123456789", false, todoOk);
     probarEsCapicua("123412345678909876543214321", true, todoOk);
     
-    cout << endl;
+    escribirMensajeFinal(todoOk);
     if (todoOk) {
-        cout << ESCAPE_NEGRITA << "Todas las pruebas realizadas correctamente"
-             << ESCAPE_NORMAL << endl;
         return 0;
     } else {
-        cout << ESCAPE_ROJO_NEGRITA
-             << "Se han detectado errores en las pruebas."
-             << ESCAPE_NORMAL << endl;
         return 1;
     }
 }
