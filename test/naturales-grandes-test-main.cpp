@@ -74,6 +74,7 @@ int main() {
     probarValor("903", 903, todoOk);
     probarValor("100670", 100670, todoOk);
     probarValor("123456789", 123456789, todoOk);
+    probarValor("4294967295", 4294967295, todoOk);
 
     // Elemento neutro
     probarSumar("0", "0", "0", false, todoOk);
@@ -108,6 +109,9 @@ int main() {
                 "No importa la suma porque hay desbordamiento", true, todoOk);
     probarSumar("1", milNueves(),
                 "No importa la suma porque hay desbordamiento", true, todoOk);
+    // Sin desbordamiento
+    probarSumar(milNueves(), "0", milNueves(), false, todoOk);
+    probarSumar("0", milNueves(), milNueves(), false, todoOk);
 
     // Multiplicaciones por 0
     probarMultiplicar("0", 0, "0", false, todoOk);
@@ -147,7 +151,10 @@ int main() {
     // Con desbordamiento
     probarMultiplicar(milNueves(), 2,
             "No importa el producto porque hay desbordamiento", true, todoOk);
-
+    // Sin desbordamiento
+    probarMultiplicar(milNueves(), 1, milNueves(), false, todoOk);
+    probarMultiplicar(milNueves(), 0, "0", false, todoOk);
+    
     probarCalcularImagen("0", "0", todoOk);
     probarCalcularImagen("1", "1", todoOk);
     probarCalcularImagen("18", "81", todoOk);
