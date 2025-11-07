@@ -27,8 +27,9 @@ int main() {
     probarCopiar("0", todoOk);
     probarCopiar("1", todoOk);
     probarCopiar("123", todoOk);
-    probarCopiar("12345678901234567890123456789012345678901234567890123456789",
+    probarCopiar("123456789012345678901234567890123456789012345678901234567890",
                  todoOk);
+    probarCopiar(milNueves(), todoOk);
 
     probarSonIguales("0", "0", true, todoOk);
     probarSonIguales("0", "1", false, todoOk);
@@ -44,11 +45,15 @@ int main() {
     probarSonIguales("1234567890", "12345678901234567890", false, todoOk);
     probarSonIguales("1234567890123456789012345678901234567890", 
                      "1234567890123456789012345678901234567890", true, todoOk);
-    probarSonIguales("1234567890123456789012345678901234567890123456789012345",
-                     "123456789012345678901234567890123456789", false, todoOk);
-    probarSonIguales("123456789012345678901234567890123456789", 
-                     "1234567890123456789012345678901234567890123456789012345",
+    probarSonIguales("123456789012345678901234567890123456789012345678901234567890", 
+                     "1234567890123456789012345678901234567890", false,
+                     todoOk);
+    probarSonIguales("1234567890123456789012345678901234567890", 
+                     "123456789012345678901234567890123456789012345678901234567890",
                      false, todoOk);
+    probarSonIguales(milNueves(), milNueves(), true, todoOk);
+    probarSonIguales(milNueves(), "999999999999999999999999", false, todoOk);
+    probarSonIguales("999999999999999999999999", milNueves(), false, todoOk);
 
     probarNumCifras("0", 1, todoOk);
     probarNumCifras("1", 1, todoOk);
@@ -60,6 +65,7 @@ int main() {
     probarNumCifras("123456789012345678901234567890", 30, todoOk);
     probarNumCifras("12345678901234567890123456789012345678901234567890", 50,
                     todoOk);
+    probarNumCifras(milNueves(), 1000, todoOk);
 
     probarConvertir(0, "0", todoOk);
     probarConvertir(1, "1", todoOk);
@@ -140,21 +146,22 @@ int main() {
     probarMultiplicar("8742", 9365, "81868830", false, todoOk);
     probarMultiplicar("2", 402, "804", false, todoOk);
     probarMultiplicar("9", 1001, "9009", false, todoOk);
-    // De más de 20 dígitos
-    // (no representables como unsigned ni como unsigned long long)
+    // De más de 20 dígitos (no representables como unsigned ni como
+    // unsigned long long)
     probarMultiplicar("123412345678901234567890", 10,
                       "1234123456789012345678900", false, todoOk);
     probarMultiplicar("999999999999999999999999", 1,
                       "999999999999999999999999", false, todoOk);
     probarMultiplicar("12341234567890123456", 12345678,
-                      "152360908097640603568023168", false, todoOk);
+                      "15241383936t691200560112896", false, todoOk);
     // Con desbordamiento
     probarMultiplicar(milNueves(), 2,
-            "No importa el producto porque hay desbordamiento", true, todoOk);
+                      "No importa el producto porque hay desbordamiento", true,
+                      todoOk);
     // Sin desbordamiento
     probarMultiplicar(milNueves(), 1, milNueves(), false, todoOk);
     probarMultiplicar(milNueves(), 0, "0", false, todoOk);
-    
+
     probarCalcularImagen("0", "0", todoOk);
     probarCalcularImagen("1", "1", todoOk);
     probarCalcularImagen("18", "81", todoOk);
@@ -164,6 +171,7 @@ int main() {
     probarCalcularImagen("1030507090", "907050301", todoOk);
     probarCalcularImagen("123412345678901234567890", "98765432109876543214321",
                          todoOk);
+    probarCalcularImagen(milNueves(), milNueves(), todoOk);
 
     probarEsCapicua("0", true, todoOk);
     probarEsCapicua("1", true, todoOk);
@@ -176,6 +184,7 @@ int main() {
     probarEsCapicua("92719", false, todoOk);
     probarEsCapicua("12341234567890123456789", false, todoOk);
     probarEsCapicua("123412345678909876543214321", true, todoOk);
+    probarEsCapicua(milNueves(), true, todoOk);
     
     escribirMensajeFinal(todoOk);
     if (todoOk) {
