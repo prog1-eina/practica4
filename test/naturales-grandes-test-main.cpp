@@ -153,7 +153,7 @@ int main() {
     probarMultiplicar("999999999999999999999999", 1,
                       "999999999999999999999999", false, todoOk);
     probarMultiplicar("12341234567890123456", 12345678,
-                      "15241383936t691200560112896", false, todoOk);
+                      "152360908097640603568023168", false, todoOk);
     // Con desbordamiento
     probarMultiplicar(milNueves(), 2,
                       "No importa el producto porque hay desbordamiento", true,
