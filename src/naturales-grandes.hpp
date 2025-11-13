@@ -102,7 +102,7 @@ void sumar(const unsigned a[], const unsigned b[], unsigned suma[], bool &desbor
  *       «NUM_DIGITOS» o menos, tras ejecutarse este procedimiento, «producto» almacena la
  *       representación del número natural equivalente al producto de los naturales
  *       representados por «a» y el valor de «b» y el valor de «desbordamiento» es «false».
- *       En el caso contrario, el valor de «suma» no está definido y el valor de
+ *       En el caso contrario, el valor de «producto» no está definido y el valor de
  *       «desbordamiento» es «true».
  */
 void multiplicar(const unsigned a[], const unsigned b, unsigned producto[], bool &desbordamiento);
