@@ -19,7 +19,7 @@ VPATH = $(SOURCE_DIR) $(TEST_DIR) $(TESTING_LIB_DIR) $(EXAMPLE_DIR)
 
 ## COMPILADOR Y OPCIONES DE COMPILACIÓN:
 CXX = g++
-CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_DIR) -I$(TESTING_LIB_DIR)
+CXXFLAGS = -Og -Wall -Wextra -I$(SOURCE_DIR) -I$(TESTING_LIB_DIR)
 
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):
@@ -48,16 +48,16 @@ OBJECTS = $(FACTORIAL_OBJECTS) $(FIBONACCI_OBJECTS) $(POTENCIA_OBJECTS) \
 ## Reglas del fichero «Makefile»
 
 factorial: $(FACTORIAL_OBJECTS) | $(BIN_DIR)
-	$(CXX) -g $(FACTORIAL_OBJECTS) -o $(BIN_DIR)/$@ 
+	$(CXX) -Og $(FACTORIAL_OBJECTS) -o $(BIN_DIR)/$@ 
 
 fibonacci: $(FIBONACCI_OBJECTS) | $(BIN_DIR)
-	$(CXX) -g $(FIBONACCI_OBJECTS) -o $(BIN_DIR)/$@ 
+	$(CXX) -Og $(FIBONACCI_OBJECTS) -o $(BIN_DIR)/$@ 
 
 primera-potencia: $(POTENCIA_OBJECTS) | $(BIN_DIR)
-	$(CXX) -g $(POTENCIA_OBJECTS) -o $(BIN_DIR)/$@ 
+	$(CXX) -Og $(POTENCIA_OBJECTS) -o $(BIN_DIR)/$@ 
 
 lychrel: $(LYCHREL_OBJECTS) | $(BIN_DIR)
-	$(CXX) -g $(LYCHREL_OBJECTS) -o $(BIN_DIR)/$@ 
+	$(CXX) -Og $(LYCHREL_OBJECTS) -o $(BIN_DIR)/$@ 
 
 naturales-grandes-test: $(TESTING_OBJECTS) | $(BIN_DIR)
 	$(CXX) $(CXXFLAGS) $(TESTING_OBJECTS) -o $(BIN_DIR)/naturales-grandes-test
@@ -66,7 +66,7 @@ suma-unsigned: example/suma-unsigned.cpp | $(BIN_DIR)
 	$(CXX) $(CXXFLAGS) example/suma-unsigned.cpp -o $(BIN_DIR)/$@ 
 
 suma-nat-grandes: $(SUMA_NAT_GRANDES_OBJECTS) | $(BIN_DIR)
-	$(CXX) -g $(SUMA_NAT_GRANDES_OBJECTS) -o $(BIN_DIR)/$@ 
+	$(CXX) -Og $(SUMA_NAT_GRANDES_OBJECTS) -o $(BIN_DIR)/$@ 
 
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
