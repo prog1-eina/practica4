@@ -1,7 +1,6 @@
 /*********************************************************************************************\
  * Programación 1. Práctica 4
  * Autores: Miguel Ángel Latre
- * Última revisión: 23 de octubre de 2024
  * Resumen: Ejemplo de desbordamiento al utilizando datos de tipo «unsigned» de 9 dígitos.
  *          El fichero «suma-nat-grandes.cpp» contiene el mismo algoritmo donde se evita el 
  *          desbordamiento utilizando la biblioteca «naturales-grandes».

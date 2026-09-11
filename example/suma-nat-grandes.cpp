@@ -1,7 +1,6 @@
 /*********************************************************************************************\
  * Programación 1. Práctica 4
  * Autores: Miguel Ángel Latre
- * Última revisión: 23 de octubre de 2024
  * Resumen: Ejemplo de funcionamiento por encima de 9 dígitos con la biblioteca
  *          «naturales-grandes».
  *          El fichero «suma-unsigned.cpp» contiene el mismo algoritmo donde se produce un 
