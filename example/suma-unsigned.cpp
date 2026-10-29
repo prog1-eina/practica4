@@ -1,6 +1,6 @@
 /*********************************************************************************************\
  * Programación 1. Práctica 4
- * Autores: Miguel Ángel Latre
+ * Autor: Miguel Ángel Latre
  * Resumen: Ejemplo de desbordamiento al utilizando datos de tipo «unsigned» de 9 dígitos.
  *          El fichero «suma-nat-grandes.cpp» contiene el mismo algoritmo donde se evita el 
  *          desbordamiento utilizando la biblioteca «naturales-grandes».
@@ -30,7 +30,8 @@ int main() {
     // 2. Cálculo de la suma
     unsigned suma = a + b;
 
-    // 3. Escritura de resultados (aunque, por diseño del programa, sabemos que ha habido desbordamiento)
+    // 3. Escritura de resultados
+    //    (aunque, por diseño del programa, sabemos que hemos provocado un desbordamiento)
     cout << "Suma de " << UINT_MAX << " y 1: " << suma << endl;
 
     // 4. Devolución de código de salida 1: sabemos que ha escrito 0 en lugar de 4294967296

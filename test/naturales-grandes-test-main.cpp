@@ -1,6 +1,6 @@
 ﻿/******************************************************************************
  * Programación 1. Práctica 4
- * Autores: Miguel Ángel Latre
+ * Autor:   Miguel Ángel Latre
  * Resumen: Programa de pruebas del módulo «naturales-grandes» de la 4.ª 
  *          práctica.
  * Nota: Para facilitar la escritura de este programa de pruebas, los números
