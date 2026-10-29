@@ -31,7 +31,6 @@ using namespace std;
  */
 const unsigned VALOR_INDEFINIDO = '?' - '0';
 
-
 /*
  * Pre:  «numero» almacena la representación de un número natural. Sea «n» el 
  *       número de dígitos de «numero». La componente numero[0] representa las
@@ -64,7 +63,6 @@ string convertirAString(const unsigned numero[]) {
     }
 }
 
-
 /*
  * Pre:  «numero» es una cadena de caracteres que contiene la representación
  *       decimal de un número natural (sin signo).
@@ -85,7 +83,6 @@ void convertirDeString(const string numeroStr, unsigned numeroGrande[]) {
     }
 }
 
-
 /*
  * Pre:  El vector «testigo» tiene «NUM_DIGITOS» componentes.
  * Post: Devuelve «true» si y solo si las «NUM_DIGITOS» componentes del vector
@@ -99,7 +96,6 @@ bool comprobarTestigo(const unsigned testigo[]) {
     }
     return true;
 }
-
 
 /*
  * Pre:  En la línea actual de la pantalla se ha escrito un texto anunciando
@@ -139,7 +135,6 @@ void escribirResultadoPrueba(const string valorEsperado,
     }
 }
 
-
 /*
  * Pre:  En la línea actual de la pantalla se ha escrito un texto anunciando
  *       que se ha realizado una prueba de una determinada función con unos
@@ -175,7 +170,6 @@ void escribirResultadoPrueba(const bool valorEsperado,
         escribirResultadoPrueba(valorEsperado, valorCalculado, todoOk);
     }
 }
-
 
 /*
  * Pre:  En la línea actual de la pantalla se ha escrito un texto anunciando
@@ -235,7 +229,6 @@ void escribirResultadoPrueba(const string valorEsperado,
     }
 }
 
-
 /*
  * Pre:  ---
  * Post: Inicializa las NUM_DIGITOS componentes de «numeroGrande» con un valor
@@ -249,7 +242,6 @@ void inicializar(unsigned numeroGrande[]) {
         numeroGrande[i] = VALOR_INDEFINIDO;
     }
 }
-
 
 /*
  * Pre:  «valorEsperado» es una cadena de caracteres que contiene la 
@@ -278,7 +270,6 @@ void probarConvertir(const unsigned n, const string valorEsperado,
     escribirResultadoPrueba(valorEsperado, convertirAString(valorCalculado),
                             testigo1, testigo2, todoOk);
 }
-
 
 /*
  * Pre:  «aStr», «bStr» y «valorEsperado» son cadenas de caracteres que
@@ -315,7 +306,6 @@ void probarSumar(const string aStr, const string bStr,
                             desbordaEsperado, desborda, 
                             testigo1, testigo2, "suma", todoOk);
 }
-
 
 /*
  * Pre:  «aStr» y «valorEsperado» son cadenas de caracteres que contienen las
@@ -374,7 +364,6 @@ void probarValor(const string numero, const unsigned valorEsperado,
    escribirResultadoPrueba(valorEsperado, valorDevuelto, todoOk);
 }
 
-
 /*
  * Pre:  «numero» es una cadena de caracteres que contiene la representación
  *       decimal de un número natural (sin signo). «valorEsperado» es la
@@ -405,7 +394,6 @@ void probarCalcularImagen(const string numero, const string valorEsperado,
                             testigo1, testigo2, todoOk);
 }
 
-
 /*
  * Pre:  «numero» almacena una cadena de caracteres con la secuencia de
  *       dígitos de un número natural. «valorEsperado» indica si la secuencia
@@ -435,7 +423,6 @@ void probarEsCapicua(const string numero, const bool valorEsperado,
                             todoOk);
 }
 
-
 /*
  * Pre:  «numeroStr» es una cadena de caracteres que contiene la representación
  *       decimal de un número natural (sin signo).
@@ -464,7 +451,6 @@ void probarCopiar(const string numeroStr, bool &todoOk) {
             convertirAString(valorCalculado), testigo1, testigo2, todoOk);
 }
 
-
 /*
  * Pre:  «aStr» y «bStr» son cadenas de caracteres que contienen la  
  *       representación decimal de dos números naturales (sin signo). 
@@ -486,7 +472,6 @@ void probarSonIguales(const string aStr, const string bStr,
     bool valorCalculado = sonIguales(a, b);
     escribirResultadoPrueba(valorEsperado, valorCalculado, todoOk);
 }
-
 
 /*
  * Pre:  «numero» es una cadena de caracteres que contiene la representación

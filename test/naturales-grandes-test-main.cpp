@@ -16,7 +16,6 @@
 #include "testing-prog1.hpp"
 using namespace std;
 
-
 /* 
  * Programa que prueba las funciones de la biblioteca «naturales-grandes»
  */

@@ -22,7 +22,6 @@ void copiar(const unsigned original[], unsigned copia[]) {
     // Por completar
 }
 
-
 /*
  * Pre:  «a» y «b» almacenan las representaciones de sendos números naturales.
  *       Las componentes a[0] y b[0] representan las unidades del natural «a» y
@@ -38,7 +37,6 @@ bool sonIguales(const unsigned a[], const unsigned b[]) {
     // Por completar
 }
 
-
 /*
  * Pre:  «natural» almacena la representación de un número natural. La
  *       componente natural[0] representa las unidades de «natural», la
@@ -52,7 +50,6 @@ bool sonIguales(const unsigned a[], const unsigned b[]) {
 unsigned numCifras(const unsigned natural[]) {
     // Por completar
 }
-
 
 /*
  * Pre:  «natural» almacena la representación de un número natural grande. La
@@ -68,7 +65,6 @@ void escribirEnPantalla(const unsigned natural[]) {
     // Por completar
 }
 
-
 /*
  * Pre:  «naturalGrande» tiene «NUM_DIGITOS» componentes.
  * Post: Tras ejecutar este procedimiento, «naturalGrande» contiene la
@@ -81,7 +77,6 @@ void escribirEnPantalla(const unsigned natural[]) {
 void convertir(const unsigned numero, unsigned naturalGrande[]) {
     // Por completar
 }
-
 
 /*
  * Pre:  «naturalGrande» almacena los dígitos de un número natural lo
@@ -97,7 +92,6 @@ void convertir(const unsigned numero, unsigned naturalGrande[]) {
 unsigned valor(const unsigned naturalGrande[]) {
     // Por completar
 }
-
 
 /*
  * Pre:  «a» y «b» almacenan las representaciones de sendos números naturales. 
@@ -119,7 +113,6 @@ void sumar(const unsigned a[], const unsigned b[],
     // Por completar
 }
 
-
 /*
  * Pre:  «a» almacena la representación de un número natural. La componente
  *       a[0] representa las unidades del natural «a», la componente a[1], las
@@ -140,7 +133,6 @@ void multiplicar(const unsigned a[], const unsigned b,
     // Por completar
 }
 
-
 /*
  * Pre:  «natural» almacena la representación de un número natural. La
  *       componente natural[0] representa las unidades de «natural», la
@@ -154,7 +146,6 @@ void multiplicar(const unsigned a[], const unsigned b,
 void calcularImagen(const unsigned natural[], unsigned imagen[]) {
     // Por completar
 }
-
 
 /*
  * Pre:  «natural» almacena la representación de un número natural. La
