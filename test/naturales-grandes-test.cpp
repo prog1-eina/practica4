@@ -358,7 +358,8 @@ void probarMultiplicar(const string aStr, const unsigned b,
 void probarValor(const string numero, const unsigned valorEsperado,
                  bool &todoOk) {
    cout << "Prueba valor(" << numero << ") ";
-   unsigned numeroGrande[NUM_DIGITOS];
+   unsigned testigo1[NUM_DIGITOS] = {}, numeroGrande[NUM_DIGITOS],
+            testigo2[NUM_DIGITOS] = {};
    convertirDeString(numero, numeroGrande);
    unsigned valorDevuelto = valor(numeroGrande);
    escribirResultadoPrueba(valorEsperado, valorDevuelto, todoOk);
@@ -488,7 +489,8 @@ void probarSonIguales(const string aStr, const string bStr,
 void probarNumCifras(const string numero, const unsigned valorEsperado,
                      bool &todoOk) {
     cout << "Prueba numCifras (" << numero << ") ";
-    unsigned numeroGrande[NUM_DIGITOS];
+    unsigned testigo1[NUM_DIGITOS] = {}, numeroGrande[NUM_DIGITOS], 
+             testigo2[NUM_DIGITOS] = {};
     convertirDeString(numero, numeroGrande);
     unsigned valorCalculado = numCifras(numeroGrande);
     escribirResultadoPrueba(valorEsperado, valorCalculado, todoOk);
