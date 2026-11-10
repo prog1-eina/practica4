@@ -11,7 +11,7 @@
  *       «naturales-grandes».
  *****************************************************************************/
 
-#include <iostream>
+#include "naturales-grandes.hpp"
 #include "naturales-grandes-test.hpp"
 #include "testing-prog1.hpp"
 using namespace std;
@@ -63,7 +63,7 @@ int main() {
     probarNumCifras("123456789012345678901234567890", 30, todoOk);
     probarNumCifras("12345678901234567890123456789012345678901234567890", 50,
                     todoOk);
-    probarNumCifras(milNueves(), 1000, todoOk);
+    probarNumCifras(milNueves(), NUM_DIGITOS, todoOk);
 
     probarConvertir(0, "0", todoOk);
     probarConvertir(1, "1", todoOk);
