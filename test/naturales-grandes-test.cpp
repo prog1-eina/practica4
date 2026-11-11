@@ -357,12 +357,20 @@ void probarMultiplicar(const string aStr, const unsigned b,
  */
 void probarValor(const string numero, const unsigned valorEsperado,
                  bool &todoOk) {
-   cout << "Prueba valor(" << numero << ") ";
-   unsigned testigo1[NUM_DIGITOS] = {}, numeroGrande[NUM_DIGITOS],
-            testigo2[NUM_DIGITOS] = {};
-   convertirDeString(numero, numeroGrande);
-   unsigned valorDevuelto = valor(numeroGrande);
-   escribirResultadoPrueba(valorEsperado, valorDevuelto, todoOk);
+    cout << "Prueba valor(" << numero << ") ";
+    unsigned testigo1[NUM_DIGITOS] = {}, numeroGrande[NUM_DIGITOS],
+                testigo2[NUM_DIGITOS] = {};
+    convertirDeString(numero, numeroGrande);
+    unsigned valorDevuelto1 = valor(numeroGrande);
+
+    inicializar(testigo1);
+    inicializar(testigo2);
+    unsigned valorDevuelto2 = valor(numeroGrande);
+    if (valorDevuelto1 == valorEsperado) {
+        escribirResultadoPrueba(valorEsperado, valorDevuelto2, todoOk);
+    } else {
+        escribirResultadoPrueba(valorEsperado, valorDevuelto1, todoOk);
+    }
 }
 
 /*
@@ -492,8 +500,16 @@ void probarNumCifras(const string numero, const unsigned valorEsperado,
     unsigned testigo1[NUM_DIGITOS] = {}, numeroGrande[NUM_DIGITOS], 
              testigo2[NUM_DIGITOS] = {};
     convertirDeString(numero, numeroGrande);
-    unsigned valorCalculado = numCifras(numeroGrande);
-    escribirResultadoPrueba(valorEsperado, valorCalculado, todoOk);
+    unsigned valorCalculado1 = numCifras(numeroGrande);
+
+    inicializar(testigo1);
+    inicializar(testigo2);
+    unsigned valorCalculado2 = numCifras(numeroGrande);
+    if (valorCalculado1 == valorEsperado) {
+        escribirResultadoPrueba(valorEsperado, valorCalculado2, todoOk);
+    } else {
+        escribirResultadoPrueba(valorEsperado, valorCalculado1, todoOk);
+    }
 }
 
 /*
