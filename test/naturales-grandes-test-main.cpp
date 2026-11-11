@@ -27,7 +27,7 @@ int main() {
     probarCopiar("123", todoOk);
     probarCopiar("123456789012345678901234567890123456789012345678901234567890",
                  todoOk);
-    probarCopiar(milNueves(), todoOk);
+    probarCopiar(todoNueves(), todoOk);
 
     probarSonIguales("0", "0", true, todoOk);
     probarSonIguales("0", "1", false, todoOk);
@@ -49,9 +49,9 @@ int main() {
     probarSonIguales("1234567890123456789012345678901234567890", 
                      "123456789012345678901234567890123456789012345678901234567890",
                      false, todoOk);
-    probarSonIguales(milNueves(), milNueves(), true, todoOk);
-    probarSonIguales(milNueves(), "999999999999999999999999", false, todoOk);
-    probarSonIguales("999999999999999999999999", milNueves(), false, todoOk);
+    probarSonIguales(todoNueves(), todoNueves(), true, todoOk);
+    probarSonIguales(todoNueves(), "999999999999999999999999", false, todoOk);
+    probarSonIguales("999999999999999999999999", todoNueves(), false, todoOk);
 
     probarNumCifras("0", 1, todoOk);
     probarNumCifras("1", 1, todoOk);
@@ -63,7 +63,7 @@ int main() {
     probarNumCifras("123456789012345678901234567890", 30, todoOk);
     probarNumCifras("12345678901234567890123456789012345678901234567890", 50,
                     todoOk);
-    probarNumCifras(milNueves(), NUM_DIGITOS, todoOk);
+    probarNumCifras(todoNueves(), NUM_DIGITOS, todoOk);
 
     probarConvertir(0, "0", todoOk);
     probarConvertir(1, "1", todoOk);
@@ -109,13 +109,13 @@ int main() {
     probarSumar("1", "999999999999999999999999", "1000000000000000000000000",
                 false, todoOk);
     // Con desbordamiento
-    probarSumar(milNueves(), "1",
+    probarSumar(todoNueves(), "1",
                 "No importa la suma porque hay desbordamiento", true, todoOk);
-    probarSumar("1", milNueves(),
+    probarSumar("1", todoNueves(),
                 "No importa la suma porque hay desbordamiento", true, todoOk);
     // Sin desbordamiento
-    probarSumar(milNueves(), "0", milNueves(), false, todoOk);
-    probarSumar("0", milNueves(), milNueves(), false, todoOk);
+    probarSumar(todoNueves(), "0", todoNueves(), false, todoOk);
+    probarSumar("0", todoNueves(), todoNueves(), false, todoOk);
 
     // Multiplicaciones por 0
     probarMultiplicar("0", 0, "0", false, todoOk);
@@ -153,12 +153,12 @@ int main() {
     probarMultiplicar("12341234567890123456", 12345678,
                       "152360908097640603568023168", false, todoOk);
     // Con desbordamiento
-    probarMultiplicar(milNueves(), 2,
+    probarMultiplicar(todoNueves(), 2,
                       "No importa el producto porque hay desbordamiento", true,
                       todoOk);
     // Sin desbordamiento
-    probarMultiplicar(milNueves(), 1, milNueves(), false, todoOk);
-    probarMultiplicar(milNueves(), 0, "0", false, todoOk);
+    probarMultiplicar(todoNueves(), 1, todoNueves(), false, todoOk);
+    probarMultiplicar(todoNueves(), 0, "0", false, todoOk);
 
     probarCalcularImagen("0", "0", todoOk);
     probarCalcularImagen("1", "1", todoOk);
@@ -169,7 +169,7 @@ int main() {
     probarCalcularImagen("1030507090", "907050301", todoOk);
     probarCalcularImagen("123412345678901234567890", "98765432109876543214321",
                          todoOk);
-    probarCalcularImagen(milNueves(), milNueves(), todoOk);
+    probarCalcularImagen(todoNueves(), todoNueves(), todoOk);
 
     probarEsCapicua("0", true, todoOk);
     probarEsCapicua("1", true, todoOk);
@@ -182,7 +182,7 @@ int main() {
     probarEsCapicua("92719", false, todoOk);
     probarEsCapicua("12341234567890123456789", false, todoOk);
     probarEsCapicua("123412345678909876543214321", true, todoOk);
-    probarEsCapicua(milNueves(), true, todoOk);
+    probarEsCapicua(todoNueves(), true, todoOk);
     
     escribirMensajeFinal(todoOk);
     if (todoOk) {

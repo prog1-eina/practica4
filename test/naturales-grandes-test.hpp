@@ -177,4 +177,4 @@ void probarNumCifras(const string numero, const unsigned valorEsperado,
  * Post: Devuelve una cadena de caracteres compuesta por NUM_DIGITOS
  *       repeticiones del  carácter '9'.
  */
-string milNueves();
+string todoNueves();
