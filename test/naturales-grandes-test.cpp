@@ -260,7 +260,7 @@ void inicializar(unsigned numeroGrande[]) {
  */
 void probarConvertir(const unsigned n, const string valorEsperado,
                      bool &todoOk) {
-    cout << "Prueba convertir (" << n << ", unsigned[]) ";
+    cout << "Prueba convertir(" << n << ", unsigned[]) ";
     unsigned testigo1[NUM_DIGITOS], valorCalculado[NUM_DIGITOS],
              testigo2[NUM_DIGITOS];
     inicializar(valorCalculado);
@@ -291,7 +291,7 @@ void probarConvertir(const unsigned n, const string valorEsperado,
 void probarSumar(const string aStr, const string bStr,
                  const string valorEsperado, const bool desbordaEsperado,
                  bool &todoOk) {
-    cout << "Prueba sumar (" << aStr << ", " << bStr
+    cout << "Prueba sumar(" << aStr << ", " << bStr
          << ", unsigned[], bool &desbordamiento) ";
     unsigned a[NUM_DIGITOS], b[NUM_DIGITOS], testigo1[NUM_DIGITOS], 
              valorCalculado[NUM_DIGITOS], testigo2[NUM_DIGITOS];
@@ -327,7 +327,7 @@ void probarSumar(const string aStr, const string bStr,
 void probarMultiplicar(const string aStr, const unsigned b, 
                        const string valorEsperado, const bool desbordaEsperado,
                        bool &todoOk) {
-    cout << "Prueba multiplicar (" << aStr << ", " << b 
+    cout << "Prueba multiplicar(" << aStr << ", " << b 
          << ", unsigned[], bool &desbordamiento) ";
     unsigned a[NUM_DIGITOS], testigo1[NUM_DIGITOS], 
              valorCalculado[NUM_DIGITOS], testigo2[NUM_DIGITOS];
@@ -391,7 +391,7 @@ void probarValor(const string numero, const unsigned valorEsperado,
  */
 void probarCalcularImagen(const string numero, const string valorEsperado,
                           bool &todoOk) {
-    cout << "Prueba calcularImagen (" << numero << ", unsigned[]) ";
+    cout << "Prueba calcularImagen(" << numero << ", unsigned[]) ";
     unsigned numeroGrande[NUM_DIGITOS], testigo1[NUM_DIGITOS], 
              valorCalculado[NUM_DIGITOS], testigo2[NUM_DIGITOS];
     convertirDeString(numero, numeroGrande);
@@ -421,7 +421,7 @@ void probarCalcularImagen(const string numero, const string valorEsperado,
  */
 void probarEsCapicua(const string numero, const bool valorEsperado,
                      bool &todoOk) {
-    cout << "Prueba esCapicua (" << numero << ") ";
+    cout << "Prueba esCapicua(" << numero << ") ";
     unsigned testigo1[NUM_DIGITOS], numeroGrande[NUM_DIGITOS],
              testigo2[NUM_DIGITOS];
     convertirDeString(numero, numeroGrande);
@@ -448,7 +448,7 @@ void probarEsCapicua(const string numero, const bool valorEsperado,
  *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarCopiar(const string numeroStr, bool &todoOk) {
-    cout << "Prueba copiar (" << numeroStr << ", unsigned[]) ";
+    cout << "Prueba copiar(" << numeroStr << ", unsigned[]) ";
     unsigned numeroGrande[NUM_DIGITOS], testigo1[NUM_DIGITOS], 
              valorCalculado[NUM_DIGITOS], testigo2[NUM_DIGITOS];
     convertirDeString(numeroStr, numeroGrande);
@@ -474,7 +474,7 @@ void probarCopiar(const string numeroStr, bool &todoOk) {
  */
 void probarSonIguales(const string aStr, const string bStr, 
                       const bool valorEsperado, bool &todoOk) {
-    cout << "Prueba sonIguales (" << aStr << ", " << bStr << ") ";
+    cout << "Prueba sonIguales(" << aStr << ", " << bStr << ") ";
     unsigned a[NUM_DIGITOS], b[NUM_DIGITOS];
     convertirDeString(aStr, a);
     convertirDeString(bStr, b);
@@ -496,7 +496,7 @@ void probarSonIguales(const string aStr, const string bStr,
  */
 void probarNumCifras(const string numero, const unsigned valorEsperado,
                      bool &todoOk) {
-    cout << "Prueba numCifras (" << numero << ") ";
+    cout << "Prueba numCifras(" << numero << ") ";
     unsigned testigo1[NUM_DIGITOS] = {}, numeroGrande[NUM_DIGITOS], 
              testigo2[NUM_DIGITOS] = {};
     convertirDeString(numero, numeroGrande);
