@@ -105,7 +105,7 @@
             "preLaunchTask": "Compilar proyecto «lychrel»"
         },
         {
-            "name": "Depurar tests del módulo «naturales-grandes»",
+            "name": "Depurar módulo «naturales-grandes»",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/naturales-grandes-test",
